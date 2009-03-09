@@ -1,0 +1,21 @@
+[alias]
+	ap = add --patch
+	br = branch
+	ci = commit
+	cia = commit --amend
+	co = checkout
+	df = diff
+	dfc = diff --cached
+	st = status
+
+	# Robey has some nice thoughts here: http://robey.lag.net/2008/07/13/git-for-the-real-world.html
+	lg = log --stat --topo-order --decorate
+	lgm = log --stat --topo-order --decorate --first-parent
+	mgnf = merge --no-ff
+
+[color]
+	ui = auto
+
+[user]
+	name = Mattias Arrelid
+	email = mattias@arrelid.com
