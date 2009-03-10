@@ -1,0 +1,58 @@
+9
+
+dir
+24
+https://svn.hunch.se/mattias/osx-library-scripts/OpenInTextMate.app/Contents
+https://svn.hunch.se/mattias
+
+
+
+2008-12-09T22:01:51.176840Z
+4
+mattias
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+98834e0e-571d-0410-bf09-ac0e1acfc769
+
+MacOS
+dir
+
+Info.plist
+file
+
+
+
+
+2008-12-09T22:02:37.000000Z
+a815b226eaa43b6c7a83928c72e3c34f
+2008-12-09T22:01:51.176840Z
+4
+mattias
+
+Resources
+dir
+
+PkgInfo
+file
+
+
+
+
+2008-12-09T22:02:37.000000Z
+7307efe10fe1868b8b80e83cc283a192
+2008-12-09T22:01:51.176840Z
+4
+mattias
+
