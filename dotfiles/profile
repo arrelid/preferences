@@ -1,0 +1,9 @@
+# Usage: Create the symlink '~/.profile' and point it to this file
+# Author: Mattias Arrelid
+
+# If there's an interactive shell, load .bashrc
+[ -f ~/.bashrc ] && . ~/.bashrc
+
+# Restrict broadcast messages to the console (see link below for details)
+# http://tldp.org/howto/remote-serial-console-howto/security-messages.html
+[ -x /usr/bin/mesg -a -x /usr/bin/tty -a `/usr/bin/tty` = /dev/ttyS0 ] && /usr/bin/mesg n
