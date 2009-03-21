@@ -8,6 +8,9 @@
 	dfc = diff --cached
 	st = status
 
+    up = pull origin master
+    pu = push --tags origin master
+
 	# Robey has some nice thoughts here: http://robey.lag.net/2008/07/13/git-for-the-real-world.html
 	lg = log --stat --topo-order --decorate
 	lgm = log --stat --topo-order --decorate --first-parent
