@@ -49,7 +49,7 @@
   # Guide: http://twistedcode.blogspot.com/2008/04/lscolors-explained.html
   # See "dircolors -p" for more examples
   export CLICOLOR=1
-  export LSCOLORS=ExGxcxdxCxegedabagacad
+  export LSCOLORS=AxbxcxdxCxegedabagacad
 
 
 # SHELL OPTIONS
