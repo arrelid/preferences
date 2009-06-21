@@ -39,7 +39,7 @@
   # Guide: http://twistedcode.blogspot.com/2008/04/lscolors-explained.html
   # See "dircolors -p" for more examples
   export CLICOLOR=1
-  export LS_COLORS='di=01;36:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=33'
+  export LS_COLORS='di=01;30:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=33'
 
 
 # SHELL OPTIONS
@@ -83,7 +83,7 @@
   fi
 
   if [ "$color_prompt" = yes ]; then
-      PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\$ '
+      PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;33m\]\w\[\033[00m\]\$ '
   else
       PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
   fi
