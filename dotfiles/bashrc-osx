@@ -1,10 +1,13 @@
 # Usage: Create the symlink '~/.bashrc' and point it to this file
 # Author: Mattias Arrelid (with lots of inspiration from Rasmus Andersson)
 
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
 # EXPORTS
 
   # Don't put duplicate lines in the history
-  export HISTCONTROL=ignoredups
+  export HISTCONTROL=ignoreboth
 
   # We want our applications to use American English as far as possible,
   # since most translations suck anyway...
@@ -43,6 +46,8 @@
   export SVN_EDITOR=$EDITOR
 
   # Enforce pretty colors when listing stuff
+  # Guide: http://twistedcode.blogspot.com/2008/04/lscolors-explained.html
+  # See "dircolors -p" for more examples
   export CLICOLOR=1
   export LSCOLORS=ExGxcxdxCxegedabagacad
 
@@ -65,9 +70,6 @@
 
 
 # MISC
-
-  # Set the user mask for all newly created files
-  umask 022
 
   # Enable bash completion if possible
   [ -f /opt/local/etc/bash_completion ] && . /opt/local/etc/bash_completion

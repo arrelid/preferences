@@ -1,8 +1,11 @@
 # Usage: Create the symlink '~/.profile' and point it to this file
 # Author: Mattias Arrelid
 
-# If there's an interactive shell, load .bashrc
-[ -f ~/.bashrc ] && . ~/.bashrc
+# Set the user mask for all newly created files
+umask 022
+
+# If there's an interactive bash shell, load .bashrc
+[ -n "$BASH_VERSION" ] && [ -f ~/.bashrc ] && . ~/.bashrc
 
 # Restrict broadcast messages to the console (see link below for details)
 # http://tldp.org/howto/remote-serial-console-howto/security-messages.html
