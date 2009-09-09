@@ -56,7 +56,7 @@
   alias l='ls -hlAF --color=auto'  # Fancy listing of files and directories
   alias grep='grep --color=auto'   # Always use colors when grepping
   alias hal='ssh hal.hunch.se'
-  alias svnrm='svn st | grep ^? | cut -b 9 | xargs rm'    # Remove all unknown (to Subversion) files
+  alias svnrm='svn st | grep ^? | cut -b 9- | xargs rm'   # Remove all unknown (to Subversion) files
   alias svnec='svn st | grep ^C | cut -b 9- | xargs mate' # Edit confliciting files
 
 
