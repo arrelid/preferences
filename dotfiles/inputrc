@@ -1,6 +1,11 @@
 # Makes it possible to do case insensitive autocomplete
 set completion-ignore-case On
 
+# These allow you to use ctrl+left/right arrow keys
+# to jump the cursor over words
+"\e[5C": forward-word
+"\e[5D": backward-word
+
 # By default up/down are bound to previous-history
 # and next-history respectively. The following does the
 # same but gives the extra functionality where if you
