@@ -1,3 +1,6 @@
+[core]
+	whitespace = trailing-space,space-before-tab
+
 [alias]
 	ap = add --patch
 	br = branch
@@ -11,9 +14,15 @@
     up = pull origin master
     pu = push --tags origin master
 
-	# Robey has some nice thoughts here: http://robey.lag.net/2008/07/13/git-for-the-real-world.html
-	lg = log --stat --topo-order --decorate
-	lgm = log --stat --topo-order --decorate --first-parent
+	# Tips and tricks for how to make logging prettier
+	# http://robey.lag.net/2008/07/13/git-for-the-real-world.html
+	# http://www.jukie.net/~bart/blog/pimping-out-git-log
+	lg = log --graph --topo-order --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cred<%an>%Creset'
+
+	# If you're working on a feature branch on _nothing_ else has happened on master
+	# (or whatever branch you came from), git will outsmart you and just fast-forward,
+	# e.g. you can't detect that you worked on a branch. You might actually want it
+	# to show in the history, i.e. you need to tell git no to fast-forward
 	mgnf = merge --no-ff
 
 [color]
