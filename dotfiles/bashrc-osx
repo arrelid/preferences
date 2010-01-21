@@ -14,12 +14,6 @@
   export LC_CTYPE=en_US.UTF-8
   export LANG=en_US.UTF-8
 
-  # UTF-8 is a nice thing. Make sure we tell 'pbcopy' about this as well,
-  # so that we can do things like 'echo "åäö" | pbcopy' and then have
-  # the expected result in the pasteboard buffer
-  # See http://www.macosxhints.com/article.php?story=20081231012753422
-  export __CF_USER_TEXT_ENCODING=0x1F5:0x8000100:0x8000100
-
   # Is Macports installed? Yeah, pretty lousy check...
   if [ -r /opt ]; then
     # Add paths to our $PATH
