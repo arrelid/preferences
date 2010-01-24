@@ -7,7 +7,7 @@
 # EXPORTS
 
   # Don't put duplicate lines in the history
-  export HISTCONTROL=ignoreboth
+  export HISTCONTROL=ignoreboth:erasedups
 
   # We want our applications to use American English as far as possible,
   # since most translations suck anyway...
