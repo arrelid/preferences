@@ -25,7 +25,7 @@
 	# If you're working on a feature branch and _nothing_ else has happened on master
 	# (or whatever branch you came from), git will outsmart you and just fast-forward,
 	# when you merge, e.g. history wont show that you've worked on a branch. You might
-	# actually want it to show in the history, hence you need to tell git no to fast-forward
+	# actually want it to show in the history, hence you need to tell git not to fast-forward
 	mgnf = merge --no-ff
 
 [color]
