@@ -14,14 +14,8 @@
   export LC_CTYPE=en_US.UTF-8
   export LANG=en_US.UTF-8
 
-  # Is Macports installed? Yeah, pretty lousy check...
-  if [ -r /opt ]; then
-    # Add paths to our $PATH
-    export PATH=/usr/local/bin:/usr/sbin:/opt/local/bin:/opt/local/sbin:$PATH
-
-    # Add man paths to our $MANPATH
-    export MANPATH=$MANPATH:/opt/local/share/man:
-  fi
+  # Add paths to our $PATH
+  export PATH=/usr/local/bin:/usr/sbin:$PATH
 
   # Colorize using less-colorize.sh
   if [ -x /usr/local/bin/less-colorize.sh ]; then
