@@ -55,11 +55,10 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>require 'open-uri'
-require 'cgi'
- 
+					<string>require 'cgi'
+
 input = STDIN.read
-print open("http://is.gd/api.php?longurl=#{CGI.escape(input.strip)}").read</string>
+print CGI.escape(input.strip)</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -88,7 +87,7 @@ print open("http://is.gd/api.php?longurl=#{CGI.escape(input.strip)}").read</stri
 				<key>Class Name</key>
 				<string>RunShellScriptAction</string>
 				<key>InputUUID</key>
-				<string>57E78D44-A59C-4F71-B1B2-3805EA9D2F45</string>
+				<string>46E88FF0-0CD7-4A0F-8F17-FE436CEAC268</string>
 				<key>Keywords</key>
 				<array>
 					<string>Shell</string>
@@ -98,9 +97,9 @@ print open("http://is.gd/api.php?longurl=#{CGI.escape(input.strip)}").read</stri
 					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>40D2C12B-EF18-4307-9ECD-370244EF408A</string>
+				<string>F0C78C68-9084-4F0C-BA27-CD054B92EE20</string>
 				<key>UUID</key>
-				<string>28A7E535-AA3D-4F2D-A171-1E44AC2D2107</string>
+				<string>751D07DD-8305-4B44-BC4B-2266B8CA1EAF</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -230,8 +229,8 @@ print open("http://is.gd/api.php?longurl=#{CGI.escape(input.strip)}").read</stri
 					<key>COMMAND_STRING</key>
 					<string>for f in "$@"
 do
-	echo -n "$f" | pbcopy 
-	/usr/local/bin/growlnotify -t "URL shortened" -m "$f"
+	echo -n "$f" | pbcopy
+	open "spotify:search:$f"
 done</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -261,7 +260,7 @@ done</string>
 				<key>Class Name</key>
 				<string>RunShellScriptAction</string>
 				<key>InputUUID</key>
-				<string>5A4DA35B-F3BB-4525-95C3-8D9C5837508A</string>
+				<string>1E2E4103-3223-4CD2-AA11-82FFA857105B</string>
 				<key>Keywords</key>
 				<array>
 					<string>Shell</string>
@@ -271,9 +270,9 @@ done</string>
 					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>D6C7F4B3-D4B5-4055-A2AD-584DFC6591EE</string>
+				<string>FEC555EF-2DF0-48F8-A75A-60189AE28229</string>
 				<key>UUID</key>
-				<string>2DB1D584-AE11-4426-9A74-23E8901768AC</string>
+				<string>89CC5729-2447-4DC2-A73A-2F3874F75582</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -359,12 +358,12 @@ done</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>C2E9C483-62CB-455A-8168-DC042918823F</key>
+		<key>4995D377-A92F-4BA0-B294-CDD6B6DF06CF</key>
 		<dict>
 			<key>from</key>
-			<string>28A7E535-AA3D-4F2D-A171-1E44AC2D2107 - 28A7E535-AA3D-4F2D-A171-1E44AC2D2107</string>
+			<string>751D07DD-8305-4B44-BC4B-2266B8CA1EAF - 751D07DD-8305-4B44-BC4B-2266B8CA1EAF</string>
 			<key>to</key>
-			<string>2DB1D584-AE11-4426-9A74-23E8901768AC - 2DB1D584-AE11-4426-9A74-23E8901768AC</string>
+			<string>89CC5729-2447-4DC2-A73A-2F3874F75582 - 89CC5729-2447-4DC2-A73A-2F3874F75582</string>
 		</dict>
 	</dict>
 	<key>state</key>
@@ -435,7 +434,7 @@ done</string>
 			</array>
 		</dict>
 		<key>windowFrame</key>
-		<string>{{21, 1}, {1000, 877}}</string>
+		<string>{{0, 1}, {1000, 877}}</string>
 		<key>workflowViewScrollPosition</key>
 		<string>{{0, 0}, {619, 609}}</string>
 	</dict>
