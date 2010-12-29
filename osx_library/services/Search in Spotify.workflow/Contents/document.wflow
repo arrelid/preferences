@@ -229,7 +229,6 @@ print CGI.escape(input.strip)</string>
 					<key>COMMAND_STRING</key>
 					<string>for f in "$@"
 do
-	echo -n "$f" | pbcopy
 	open "spotify:search:$f"
 done</string>
 					<key>CheckedForUserDefaultShell</key>
@@ -358,7 +357,7 @@ done</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>4995D377-A92F-4BA0-B294-CDD6B6DF06CF</key>
+		<key>7A42AC34-ED98-4C54-9074-912CC857D45D</key>
 		<dict>
 			<key>from</key>
 			<string>751D07DD-8305-4B44-BC4B-2266B8CA1EAF - 751D07DD-8305-4B44-BC4B-2266B8CA1EAF</string>
@@ -434,7 +433,7 @@ done</string>
 			</array>
 		</dict>
 		<key>windowFrame</key>
-		<string>{{0, 1}, {1000, 877}}</string>
+		<string>{{213, 0}, {1000, 877}}</string>
 		<key>workflowViewScrollPosition</key>
 		<string>{{0, 0}, {619, 609}}</string>
 	</dict>
