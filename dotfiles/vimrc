@@ -1,0 +1,29 @@
+set nocompatible
+
+set ruler
+set number
+
+colorscheme desert
+syntax on
+
+" Whitespacing and line/row breaks
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+set list listchars=tab:»·,trail:·,precedes:<,extends:>
+
+" Searching
+set incsearch
+set ignorecase
+set hlsearch
+set smartcase
+
+" Tab completion
+set wildmode=list:longest,list:full
+
+" Always show the status bar
+set laststatus=2
+
