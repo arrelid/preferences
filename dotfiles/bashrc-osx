@@ -81,4 +81,6 @@ function parse_git_branch {
 # MISC
 
   # Enable bash completion if possible
-  [ -f /opt/local/etc/bash_completion ] && . /opt/local/etc/bash_completion
+  if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+  fi
