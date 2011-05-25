@@ -17,19 +17,13 @@
   # Add paths to our $PATH
   export PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:$PATH
 
-  # Colorize using less-colorize.sh
-  if [ -x /usr/local/bin/less-colorize.sh ]; then
-    export LESSOPEN="| /usr/local/bin/less-colorize.sh %s"
-    export LESS='--RAW-CONTROL-CHARS --LINE-NUMBERS'
-  fi
-
   # Python customizations
   if [ -x ~/.pythonrc.py ]; then
     export PYTHONSTARTUP=~/.pythonrc.py
   fi
 
   # Use nano as editor
-  export EDITOR="nano"
+  export EDITOR="vi"
   export VISUAL_EDITOR=$EDITOR
   export SVN_EDITOR=$EDITOR
 
@@ -52,30 +46,17 @@
 # ALIASES
 
   alias l='ls -hlAF'            # Fancy listing of files and directories
-  alias grep='grep --color'     # Always use colors when grepping
-  alias hal='ssh hal.hunch.se'
-  alias svnrm='svn st | grep ^? | cut -b 9- | xargs rm'   # Remove all unknown (to Subversion) files
-  alias svnec='svn st | grep ^C | cut -b 9- | xargs mate' # Edit confliciting files
 
 
 # PROMPT
-
-# Git status for prompt
-function parse_git_dirty {
-	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
-}
-function parse_git_branch {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
-}
 
   # Updates the prompt with colors, title etc. Kudos to Rasmus Andersson for doing the dirty work!
   alias _userpwd='/usr/bin/perl -e '"'"'use Cwd;my $d=cwd();my $h=$ENV{"HOME"};my $dl=length($d);my $hl=length($h);if(($dl>=$hl)&&($h==substr($d,$hl))){print "~".substr($d,$hl,$dl);}else{print $d;}'"'"
   _PS1prefix="\[\e[40;32;1m\]>>> "
   _PS1user="\[\e[31;1m\]\u"
   _PS1meta1="\[\e[0;40m\]@\h\[\e[0;40m\]:\[\e[33;1m\]\w \[\e[0;1;30m\] \t \[\e[36;1m\]"
-  _PS1meta2="\[\e[32;1m\]\$(parse_git_branch) \[\e[36;1m\]"
   _PS1end="\n\[\e[36;1m\]\\$\[\e[0m\] "
-  export PROMPT_COMMAND='PS1="$_PS1prefix$_PS1user$_PS1meta1$_PS1meta2$(echo -ne $(jobs -l | sed -E "s/^\[([0-9]+)\].{1,1} +([0-9]+) [A-Za-z]+ +(.+)/\3 [#\1 \2]/"))$_PS1end"; echo -ne "\033]0;`id -un`@`hostname -s`:`_userpwd` [$(date +%H:%M)]\007"'
+  export PROMPT_COMMAND='PS1="$_PS1prefix$_PS1user$_PS1meta1$_PS1end"; echo -ne "\033]0;`id -un`@`hostname -s`:`_userpwd` [$(date +%H:%M)]\007"'
 
 
 # MISC
