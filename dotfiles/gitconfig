@@ -1,4 +1,6 @@
 [core]
+	autocrlf = input
+	safecrlf = true
 	whitespace = trailing-space,space-before-tab
 	
 [branch]
