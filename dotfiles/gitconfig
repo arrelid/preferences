@@ -2,6 +2,7 @@
 	autocrlf = input
 	safecrlf = true
 	whitespace = trailing-space,space-before-tab
+	excludesfile = ~/.gitignore
 	
 [branch]
 	autosetuprebase = always
