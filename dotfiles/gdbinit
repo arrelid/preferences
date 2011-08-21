@@ -1,19 +1,2 @@
 fb objc_exception_throw
-
-define loadfs
-
-    if $argc == 1
-        attach $arg0
-    end
-
-    call (id) objc_getClass("NSBundle")
-    call (id)[$ bundleWithPath:@"/Library/Frameworks/FScript.framework"]
-    call (void)[$ load]
-    call (id) objc_getClass("FScriptMenuItem")
-    call (void)[$ insertInMainMenu]
-
-    if $argc == 1
-        continue
-    end
-
-end
+fb malloc_error_break
