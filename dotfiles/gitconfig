@@ -3,6 +3,7 @@
 	safecrlf = true
 	whitespace = trailing-space,space-before-tab
 	excludesfile = ~/.gitignore
+	quotepath = false
 	
 [branch]
 	autosetuprebase = always
