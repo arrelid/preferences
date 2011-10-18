@@ -27,6 +27,5 @@ set wildmode=list:longest,list:full
 " Always show the status bar
 set laststatus=2
 
-" Don't let Command-T show gazillions of lines
-let g:CommandTMaxHeight=20
-
+" Let's make the redraw command clear highlighted text
+nnoremap <silent> <C-l> :nohl<CR><C-l>
