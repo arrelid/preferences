@@ -23,7 +23,7 @@
   fi
 
   # Use nano as editor
-  export EDITOR="vi"
+  export EDITOR="vim"
   export VISUAL_EDITOR=$EDITOR
   export SVN_EDITOR=$EDITOR
 
