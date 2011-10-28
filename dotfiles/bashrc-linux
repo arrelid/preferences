@@ -7,18 +7,12 @@
 # EXPORTS
 
   # Don't put duplicate lines in the history
-  export HISTCONTROL=ignoreboth
+  export HISTCONTROL=ignoreboth:erasedups
 
   # We want our applications to use American English as far as possible,
   # since most translations suck anyway...
   export LC_CTYPE=en_US.UTF-8
   export LANG=en_US.UTF-8
-
-  # Colorize using less-colorize.sh
-  if [ -x /usr/local/bin/less-colorize.sh ]; then
-    export LESSOPEN="| /usr/local/bin/less-colorize.sh %s"
-    export LESS='--RAW-CONTROL-CHARS --LINE-NUMBERS'
-  fi
 
   # Python customizations
   if [ -x ~/.pythonrc.py ]; then
@@ -26,14 +20,9 @@
   fi
 
   # Use nano as editor
-  export EDITOR="nano"
+  export EDITOR="vim"
   export VISUAL_EDITOR=$EDITOR
   export SVN_EDITOR=$EDITOR
-
-  # Not really an export, but set default colors...
-  if [ -x /usr/bin/dircolors ]; then
-    eval "`dircolors -b`"
-  fi
 
   # Enforce pretty colors when listing stuff
   # Guide: http://twistedcode.blogspot.com/2008/04/lscolors-explained.html
@@ -54,49 +43,12 @@
 # ALIASES
 
   alias l='ls -hlAF --color=auto'  # Fancy listing of files and directories
-  alias grep='grep --color=auto'   # Always use colors when grepping
-  alias hal='ssh hal.hunch.se'
-  alias svnrm='svn st | grep ^? | cut -b 9- | xargs rm'   # Remove all unknown (to Subversion) files
-  alias svnec='svn st | grep ^C | cut -b 9- | xargs mate' # Edit confliciting files
 
 
 # MISC
-
-  # Set a fancy prompt (non-color, unless we know we "want" color)
-  case "$TERM" in
-    xterm-color) color_prompt=yes;;
-  esac
-
-  # Uncomment for a colored prompt, if the terminal has the capability; turned
-  # off by default to not distract the user: the focus in a terminal window
-  # should be on the output of commands, not on the prompt
-  #force_color_prompt=yes
-
-  if [ -n "$force_color_prompt" ]; then
-      if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-  	# We have color support; assume it's compliant with Ecma-48
-  	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-  	# a case would tend to support setf rather than setaf.)
-  	color_prompt=yes
-      else
-  	color_prompt=
-      fi
-  fi
-
-  if [ "$color_prompt" = yes ]; then
-      PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;33m\]\w\[\033[00m\]\$ '
-  else
-      PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-  fi
-  unset color_prompt force_color_prompt
 
   # Enable bash completion if possible
   [ -f /etc/bash_completion ] && . /etc/bash_completion
 
   # Make less more friendly for non-text input files, see lesspipe(1)
   [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-  # Set variable identifying the chroot you work in (used in the prompt below)
-  if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-  fi
