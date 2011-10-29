@@ -27,5 +27,9 @@ set wildmode=list:longest,list:full
 " Always show the status bar
 set laststatus=2
 
-" Let's make the redraw command clear highlighted text
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+" Show tab bar, always
+set guioptions=cem
+set showtabline=2
+
+" Clear the last search
+map <silent> <C-L> :let @/ = ""<CR>
