@@ -33,3 +33,6 @@ set showtabline=2
 
 " Clear the last search
 map <silent> <C-L> :let @/ = ""<CR>
+
+" Allow saving of files as sudo when you forget to start vim using sudo.
+cmap w!! %!sudo tee > /dev/null %
