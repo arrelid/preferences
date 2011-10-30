@@ -66,6 +66,9 @@
 # MISC
 
   # Enable bash completion if possible
-  if [ -f `brew --prefix`/etc/bash_completion ]; then
+  brew --version &> /dev/null
+  if [[ $? == 0 && -f `brew --prefix`/etc/bash_completion ]]; then
     . `brew --prefix`/etc/bash_completion
+  elif [[ -f /etc/bash_completion ]]; then
+    . /etc/bash_completion
   fi
