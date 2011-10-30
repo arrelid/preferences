@@ -42,7 +42,6 @@
   fi
 
 
-
 # SHELL OPTIONS
 
   shopt -s cmdhist       # Make bash try to store multiline commands in one history entry
