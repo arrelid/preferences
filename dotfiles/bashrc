@@ -27,11 +27,20 @@
   export VISUAL_EDITOR=$EDITOR
   export SVN_EDITOR=$EDITOR
 
+
   # Enforce pretty colors when listing stuff
   # Guide: http://twistedcode.blogspot.com/2008/04/lscolors-explained.html
   # See "dircolors -p" for more examples
   export CLICOLOR=1
-  export LSCOLORS=AxbxcxdxCxegedabagacad
+
+  if [[ $(uname) == "Linux" ]]; then
+    alias l='ls -hlAF --color=auto'
+    export LS_COLORS='di=33:fi=0:ln=95:pi=5:so=5:bd=5:cd=5:or=37:mi=0:ex=31:*.rpm=90'
+  elif [[ $(uname) == "Darwin" ]]; then
+    alias l='ls -hlAFG'
+    export LSCOLORS=AxbxcxdxCxegedabagacad
+  fi
+
 
 
 # SHELL OPTIONS
@@ -41,11 +50,6 @@
   shopt -s histappend    # Append to history rather than overwrite
   shopt -s checkwinsize  # Update lines and columns after each command (if necessary)
   shopt -s dotglob       # Includes filenames beginning with a '.' in the results of filename expansion.
-
-
-# ALIASES
-
-  alias l='ls -hlAF'            # Fancy listing of files and directories
 
 
 # PROMPT
