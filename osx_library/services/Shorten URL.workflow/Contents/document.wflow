@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>247.1</string>
+	<string>330</string>
 	<key>AMApplicationVersion</key>
-	<string>2.1.1</string>
+	<string>2.2.1</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -25,7 +25,11 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>2.0.1</string>
+				<string>2.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
 				<key>AMParameterProperties</key>
 				<dict>
 					<key>COMMAND_STRING</key>
@@ -69,14 +73,10 @@ print open("http://is.gd/api.php?longurl=#{CGI.escape(input.strip)}").read</stri
 					<key>source</key>
 					<string></string>
 				</dict>
-				<key>Application</key>
-				<array>
-					<string>Automator</string>
-				</array>
 				<key>BundleIdentifier</key>
 				<string>com.apple.RunShellScript</string>
 				<key>CFBundleVersion</key>
-				<string>2.0.1</string>
+				<string>2.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -176,7 +176,7 @@ print open("http://is.gd/api.php?longurl=#{CGI.escape(input.strip)}").read</stri
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:554.000000</string>
+				<string>659.000000:632.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -198,7 +198,11 @@ print open("http://is.gd/api.php?longurl=#{CGI.escape(input.strip)}").read</stri
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>2.0.1</string>
+				<string>2.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
 				<key>AMParameterProperties</key>
 				<dict>
 					<key>COMMAND_STRING</key>
@@ -231,7 +235,7 @@ print open("http://is.gd/api.php?longurl=#{CGI.escape(input.strip)}").read</stri
 					<string>for f in "$@"
 do
 	echo -n "$f" | pbcopy 
-	/usr/local/bin/growlnotify -t "URL shortened" -m "$f"
+	/usr/local/bin/growlnotify -m "$f" "URL shortened"
 done</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -242,14 +246,10 @@ done</string>
 					<key>source</key>
 					<string></string>
 				</dict>
-				<key>Application</key>
-				<array>
-					<string>Automator</string>
-				</array>
 				<key>BundleIdentifier</key>
 				<string>com.apple.RunShellScript</string>
 				<key>CFBundleVersion</key>
-				<string>2.0.1</string>
+				<string>2.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -349,7 +349,7 @@ done</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:371.000000</string>
+				<string>659.000000:449.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -359,7 +359,7 @@ done</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>C2E9C483-62CB-455A-8168-DC042918823F</key>
+		<key>91CD94E4-1D41-4848-9765-41429F943A8C</key>
 		<dict>
 			<key>from</key>
 			<string>28A7E535-AA3D-4F2D-A171-1E44AC2D2107 - 28A7E535-AA3D-4F2D-A171-1E44AC2D2107</string>
@@ -445,6 +445,8 @@ done</string>
 		<string>com.apple.Automator.text</string>
 		<key>serviceOutputTypeIdentifier</key>
 		<string>com.apple.Automator.nothing</string>
+		<key>serviceProcessesInput</key>
+		<integer>0</integer>
 		<key>workflowTypeIdentifier</key>
 		<string>com.apple.Automator.servicesMenu</string>
 	</dict>
