@@ -42,3 +42,13 @@
 [push]
 	# Only push the current branch you're on
 	default = tracking
+
+[merge]
+  # Show common ancestor when merge fails
+  # http://psung.blogspot.com/2011/02/reducing-merge-headaches-git-meets.html
+	conflictstyle = diff3
+
+[rerere]
+  # Reuse previously recorded merge solution
+  # http://psung.blogspot.com/2011/02/reducing-merge-headaches-git-meets.html
+	enabled = 1
