@@ -10,9 +10,9 @@
   export HISTCONTROL=ignoreboth:erasedups
 
   # We want our applications to use American English as far as possible,
-  # since most translations suck anyway...
-  export LC_CTYPE=en_US.UTF-8
-  export LANG=en_US.UTF-8
+  # since most translations sucks anyway...
+  export LC_ALL='en_US.UTF-8'
+  export LANG='en_US.UTF-8'
 
   # Add paths to our $PATH
   export PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:$PATH
