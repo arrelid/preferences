@@ -1,35 +1,33 @@
-set nocompatible
+" Generic settings
+set encoding=utf-8  " utf-8 is the shiznitz
+set guioptions=cem  " use the console for confirmation dialogues + display the tab bar in the gui + show the menu bar
+set laststatus=2    " always show the status bar
+set nocompatible    " don't care about vi
+set number          " everyone loves row numbers 
+set ruler           " show information about current row/col 
+set showcmd         " show useful information about the current state of keyboard input in normal mode
+set showtabline=2   " always show the tab bar
 
-set ruler
-set number
-
-colorscheme desert
-syntax on
+colorscheme desert  " fancy colors ftw
+syntax on           " enable syntax highlighting depending on file type
 
 " Whitespacing and line/row breaks
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set wrap
-set linebreak
-set listchars=tab:»·,trail:·,precedes:<,extends:>
+set tabstop=2                                       " a tab is two spaces
+set shiftwidth=2                                    " indentation should follow tabstop, or stuff will have different indentation
+set expandtab                                       " expand tabs into spaces
+set nowrap                                          " seriously, don't wrap by default
+set linebreak                                       " break on word barriers
+set listchars=tab:»·,trail:·,precedes:<,extends:>   " highlight these little bastard when 'set list' is invoked
+set backspace=indent,eol,start                      " backspace through everything in insert mode
 
 " Searching
-set incsearch
-set ignorecase
-set hlsearch
-set smartcase
+set hlsearch    " highlight matches
+set incsearch   " incremental searching
+set ignorecase  " searches are case insensitive...
+set smartcase   " ... unless they contain at least one capital letter
 
-" Tab completion
-set wildmode=list:longest,list:full
-
-" Always show the status bar
-set laststatus=2
-
-" Show tab bar, always
-set guioptions=cem
-set showtabline=2
+" Tab completion behavior when opening files
+set wildmode=list:longest,list:full  " complete as much as possible, then full for each press on tab
 
 " Clear the last search
 map <silent> <C-L> :let @/ = ""<CR>
