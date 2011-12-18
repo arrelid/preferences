@@ -1,12 +1,15 @@
 " Generic settings
-set encoding=utf-8  " utf-8 is the shiznitz
-set guioptions=cem  " use the console for confirmation dialogues + display the tab bar in the gui + show the menu bar
-set laststatus=2    " always show the status bar
-set nocompatible    " don't care about vi
-set number          " everyone loves row numbers 
-set ruler           " show information about current row/col 
-set showcmd         " show useful information about the current state of keyboard input in normal mode
-set showtabline=2   " always show the tab bar
+set encoding=utf-8         " utf-8 is the shiznitz
+set guioptions=cem         " use the console for confirmation dialogues + display the tab bar in the gui + show the menu bar
+set laststatus=2           " always show the status bar
+set nobackup               " use _other_ means as backup than *.orig files
+set nocompatible           " don't care about vi
+set noswapfile             " swap files - good if you're editing large files on a daily basis maybe, but i'm not... 
+set number                 " everyone loves row numbers 
+set ruler                  " show information about current row/col 
+set showcmd                " show useful information about the current state of keyboard input in normal mode
+set showtabline=2          " always show the tab bar
+filetype plugin indent on  " base indentation on filetype
 
 colorscheme desert  " fancy colors ftw
 syntax on           " enable syntax highlighting depending on file type
