@@ -11,6 +11,7 @@ set showcmd                " show useful information about the current state of 
 set showtabline=2          " always show the tab bar
 filetype plugin indent on  " base indentation on filetype
 
+let mapleader=","   " the leader key should be easy to type (',' is easier than '\')
 colorscheme desert  " fancy colors ftw
 syntax on           " enable syntax highlighting depending on file type
 
