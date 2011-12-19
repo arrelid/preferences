@@ -36,5 +36,9 @@ set wildmode=list:longest,list:full  " complete as much as possible, then full f
 " Turn off hithe last search
 map <silent> <C-L> :set hlsearch! hlsearch?<CR>
 
+" When moving around using j/k, jump _within_ wrapped lines too (since you probably don't want to skip an entire paragraph).
+nnoremap j gj
+nnoremap k gk
+
 " Allow saving of files as sudo when you forget to start vim using sudo.
 cmap w!! %!sudo tee > /dev/null %
