@@ -42,3 +42,6 @@ nnoremap k gk
 
 " Allow saving of files as sudo when you forget to start vim using sudo.
 cmap w!! %!sudo tee > /dev/null %
+
+" Command-T configuration
+let g:CommandTMaxHeight=15 
