@@ -33,8 +33,8 @@ set smartcase   " ... unless they contain at least one capital letter
 " Tab completion behavior when opening files
 set wildmode=list:longest,list:full  " complete as much as possible, then full for each press on tab
 
-" Clear the last search
-map <silent> <C-L> :let @/ = ""<CR>
+" Turn off hithe last search
+map <silent> <C-L> :set hlsearch! hlsearch?<CR>
 
 " Allow saving of files as sudo when you forget to start vim using sudo.
 cmap w!! %!sudo tee > /dev/null %
