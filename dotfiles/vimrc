@@ -9,10 +9,8 @@ set number                 " everyone loves row numbers
 set ruler                  " show information about current row/col 
 set showcmd                " show useful information about the current state of keyboard input in normal mode
 set showtabline=2          " always show the tab bar
-filetype plugin indent on  " base indentation on filetype
 
 let mapleader=","   " the leader key should be easy to type (',' is easier than '\')
-colorscheme desert  " fancy colors ftw
 syntax on           " enable syntax highlighting depending on file type
 
 " Whitespacing and line/row breaks
@@ -43,5 +41,23 @@ nnoremap k gk
 " Allow saving of files as sudo when you forget to start vim using sudo.
 cmap w!! %!sudo tee > /dev/null %
 
+" Setup vundle
+filetype off                                  " Required
+set rtp+=~/.vim/bundle/vundle/                " Make sure to clone vundle.git here first
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'altercation/vim-colors-solarized'
+
+" Vundle setup complete, reset filetype
+filetype plugin indent on
+
 " Command-T configuration
-let g:CommandTMaxHeight=15 
+let g:CommandTMaxHeight=15
+
+" Use the solarized color scheme
+set background=dark
+colorscheme solarized
