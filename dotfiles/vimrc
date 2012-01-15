@@ -60,4 +60,5 @@ let g:CommandTMaxHeight=15
 
 " Use the solarized color scheme
 set background=dark
+let g:solarized_termcolors=256  " Fancy fallback so that you don't have to change your terminal's color scheme
 colorscheme solarized
