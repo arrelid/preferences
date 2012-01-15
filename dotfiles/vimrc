@@ -4,9 +4,9 @@ set guioptions=cem         " use the console for confirmation dialogues + displa
 set laststatus=2           " always show the status bar
 set nobackup               " use _other_ means as backup than *.orig files
 set nocompatible           " don't care about vi
-set noswapfile             " swap files - good if you're editing large files on a daily basis maybe, but i'm not... 
-set number                 " everyone loves row numbers 
-set ruler                  " show information about current row/col 
+set noswapfile             " swap files - good if you're editing large files on a daily basis maybe, but i'm not...
+set number                 " everyone loves row numbers
+set ruler                  " show information about current row/col
 set showcmd                " show useful information about the current state of keyboard input in normal mode
 set showtabline=2          " always show the tab bar
 
@@ -51,6 +51,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'bitc/vim-bad-whitespace'
 
 " Vundle setup complete, reset filetype
 filetype plugin indent on
