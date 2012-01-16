@@ -10,6 +10,17 @@ set ruler                  " show information about current row/col
 set showcmd                " show useful information about the current state of keyboard input in normal mode
 set showtabline=2          " always show the tab bar
 
+" Change the statusline to show some more stuff than just the defaults
+set statusline=%f\ \                             " Relative file name
+set statusline+=%n\ \                            " Buffer number
+set statusline+=%m                               " Modified flag
+set statusline+=%y                               " File type
+set statusline+=%{fugitive#statusline()}\        " Current git branch (if any)
+set statusline+=%=                               " Left/right separator
+set statusline+=%c,\                             " Cursor column
+set statusline+=%l/%L                            " Cursor line/total lines
+set statusline+=\ %P                             " Percent through file
+
 let mapleader=","   " the leader key should be easy to type (',' is easier than '\')
 syntax on           " enable syntax highlighting depending on file type
 
