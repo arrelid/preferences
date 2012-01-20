@@ -25,7 +25,8 @@ let mapleader=","   " the leader key should be easy to type (',' is easier than 
 syntax on           " enable syntax highlighting depending on file type
 
 " Whitespacing and line/row breaks
-set tabstop=2                                       " a tab is two spaces
+set tabstop=2                                       " a tab is two spaces...
+set softtabstop=2                                   " ...and the corresponding backspace removes the same amount of space
 set shiftwidth=2                                    " indentation should follow tabstop, or stuff will have different indentation
 set expandtab                                       " expand tabs into spaces
 set nowrap                                          " seriously, don't wrap by default
