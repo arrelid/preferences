@@ -63,6 +63,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bitc/vim-bad-whitespace'
+Bundle 'tpope/vim-unimpaired'
 
 " Vundle setup complete, reset filetype
 filetype plugin indent on
