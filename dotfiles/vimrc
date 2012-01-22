@@ -69,6 +69,12 @@ Bundle 'tpope/vim-unimpaired'
 " Vundle setup complete, reset filetype
 filetype plugin indent on
 
+if has("autocmd")
+  autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType c,cpp,objc setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType text setlocal ts=2 sts=2 sw=2 expandtab wrap
+endif
+
 " Command-T configuration
 let g:CommandTMaxHeight=15
 
