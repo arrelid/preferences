@@ -1,6 +1,7 @@
 " Generic settings
 set encoding=utf-8         " utf-8 is the shiznitz
 set guioptions=cem         " use the console for confirmation dialogues + display the tab bar in the gui + show the menu bar
+set hidden                 " allow hiding buffers with unsaved changes when navigating the buffer list
 set laststatus=2           " always show the status bar
 set nobackup               " use _other_ means as backup than *.orig files
 set nocompatible           " don't care about vi
