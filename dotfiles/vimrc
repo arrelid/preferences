@@ -60,11 +60,14 @@ set rtp+=~/.vim/bundle/vundle/                " Make sure to clone vundle.git he
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
+
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bitc/vim-bad-whitespace'
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 
 " Vundle setup complete, reset filetype
