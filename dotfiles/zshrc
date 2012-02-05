@@ -1,0 +1,24 @@
+# Well look at this - we're relying on oh-my-zsh!
+
+# Path to the configuration
+ZSH=$HOME/.oh-my-zsh
+
+# Fancy schmancy theme
+ZSH_THEME="prose"
+
+# Display two red dots (at EOL) while waiting for completion
+COMPLETION_WAITING_DOTS="true"
+
+# Plugins to load on startup
+plugins=(git brew)
+
+# And... perform setup of oh-my-zsh!
+source $ZSH/oh-my-zsh.sh
+
+# We want our applications to use American English as far as possible,
+# since most translations sucks anyway...
+export LC_ALL='en_US.UTF-8'
+export LANG='en_US.UTF-8'
+
+# Add custom paths to our $PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:$PATH
