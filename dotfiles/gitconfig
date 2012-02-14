@@ -4,7 +4,7 @@
 	whitespace = trailing-space,space-before-tab
 	excludesfile = ~/.gitignore
 	quotepath = false
-	
+
 [branch]
 	autosetuprebase = always
 
@@ -17,9 +17,6 @@
 	df = diff
 	dfc = diff --cached
 	st = status
-
-    up = pull origin master
-    pu = push --tags origin master
 
 	# Tips and tricks for how to make logging prettier
 	# http://robey.lag.net/2008/07/13/git-for-the-real-world.html
