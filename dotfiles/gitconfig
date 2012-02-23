@@ -1,13 +1,3 @@
-[core]
-	autocrlf = input
-	safecrlf = true
-	whitespace = trailing-space,space-before-tab
-	excludesfile = ~/.gitignore
-	quotepath = false
-
-[branch]
-	autosetuprebase = always
-
 [alias]
 	ap = add --patch
 	br = branch
@@ -29,23 +19,33 @@
 	# actually want it to show in the history, hence you need to tell git not to fast-forward
 	mgnf = merge --no-ff
 
+[branch]
+	autosetuprebase = always
+
 [color]
 	ui = auto
 
-[user]
-	name = Mattias Arrelid
-	email = mattias@arrelid.com
-
-[push]
-	# Only push the current branch you're on
-	default = tracking
+[core]
+	autocrlf = input
+	safecrlf = true
+	whitespace = trailing-space,space-before-tab
+	excludesfile = ~/.gitignore
+	quotepath = false
 
 [merge]
   # Show common ancestor when merge fails
   # http://psung.blogspot.com/2011/02/reducing-merge-headaches-git-meets.html
 	conflictstyle = diff3
 
+[push]
+	# Only push the current branch you're on
+	default = tracking
+
 [rerere]
   # Reuse previously recorded merge solution
   # http://psung.blogspot.com/2011/02/reducing-merge-headaches-git-meets.html
 	enabled = 1
+
+[user]
+	name = Mattias Arrelid
+	email = mattias@arrelid.com
