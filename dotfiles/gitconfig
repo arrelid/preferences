@@ -1,36 +1,36 @@
 [alias]
-	ap = add --patch
-	br = branch
-	ci = commit
-	cia = commit --amend
-	co = checkout
-	df = diff
-	dfc = diff --cached
-	st = status
+  ap = add --patch
+  br = branch
+  ci = commit
+  cia = commit --amend
+  co = checkout
+  df = diff
+  dfc = diff --cached
+  st = status
 
-	# Tips and tricks for how to make logging prettier
-	# http://robey.lag.net/2008/07/13/git-for-the-real-world.html
-	# http://www.jukie.net/~bart/blog/pimping-out-git-log
-	lg = log --graph --topo-order --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cred<%an>%Creset'
+  # Tips and tricks for how to make logging prettier
+  # http://robey.lag.net/2008/07/13/git-for-the-real-world.html
+  # http://www.jukie.net/~bart/blog/pimping-out-git-log
+  lg = log --graph --topo-order --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cred<%an>%Creset'
 
-	# If you're working on a feature branch and _nothing_ else has happened on master
-	# (or whatever branch you came from), git will outsmart you and just fast-forward,
-	# when you merge, e.g. history wont show that you've worked on a branch. You might
-	# actually want it to show in the history, hence you need to tell git not to fast-forward
-	mgnf = merge --no-ff
+  # If you're working on a feature branch and _nothing_ else has happened on master
+  # (or whatever branch you came from), git will outsmart you and just fast-forward,
+  # when you merge, e.g. history wont show that you've worked on a branch. You might
+  # actually want it to show in the history, hence you need to tell git not to fast-forward
+  mgnf = merge --no-ff
 
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
 
 [color]
-	ui = auto
+  ui = auto
 
 [core]
-	autocrlf = input
-	safecrlf = true
-	whitespace = trailing-space,space-before-tab
-	excludesfile = ~/.gitignore
-	quotepath = false
+  autocrlf = input
+  safecrlf = true
+  whitespace = trailing-space,space-before-tab
+  excludesfile = ~/.gitignore
+  quotepath = false
 
 [gc]
   # Perform GC automagically, when needed
@@ -39,17 +39,17 @@
 [merge]
   # Show common ancestor when merge fails
   # http://psung.blogspot.com/2011/02/reducing-merge-headaches-git-meets.html
-	conflictstyle = diff3
+  conflictstyle = diff3
 
 [push]
-	# Only push the current branch you're on
-	default = tracking
+  # Only push the current branch you're on
+  default = tracking
 
 [rerere]
   # Reuse previously recorded merge solution
   # http://psung.blogspot.com/2011/02/reducing-merge-headaches-git-meets.html
-	enabled = 1
+  enabled = 1
 
 [user]
-	name = Mattias Arrelid
-	email = mattias@arrelid.com
+  name = Mattias Arrelid
+  email = mattias@arrelid.com
