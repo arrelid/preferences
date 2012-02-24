@@ -8,16 +8,27 @@
   dfc = diff --cached
   st = status
 
+  # When cherry-picking, put the original commit hash in the commit message.
+  cp = cherry-pick -x
+
   # Tips and tricks for how to make logging prettier
   # http://robey.lag.net/2008/07/13/git-for-the-real-world.html
   # http://www.jukie.net/~bart/blog/pimping-out-git-log
   lg = log --graph --topo-order --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cred<%an>%Creset'
 
-  # If you're working on a feature branch and _nothing_ else has happened on master
-  # (or whatever branch you came from), git will outsmart you and just fast-forward,
-  # when you merge, e.g. history wont show that you've worked on a branch. You might
-  # actually want it to show in the history, hence you need to tell git not to fast-forward
+  # git will outsmart you and try to fast-forward when you merge, i.e. history wont
+  # show that you've worked on a branch. This is just fine in most cases, but it's
+  # not the right thing for feature branches, and hence you need to tell git not
+  # to fast-forward when merging in these cases.
   mgnf = merge --no-ff
+
+  # When stashing, keep the stuff you've already added to the index in there. In
+  # other words, stash whatever git diff tells you differs.
+  stu = stash --keep-index
+
+  # For those times when you just want to rewind time...
+  uncommit = reset --soft HEAD^
+  unstage = reset HEAD
 
 [branch]
   autosetuprebase = always
@@ -34,12 +45,16 @@
 
 [gc]
   # Perform GC automagically, when needed
-  auto=1
+  auto = 1
 
 [merge]
   # Show common ancestor when merge fails
   # http://psung.blogspot.com/2011/02/reducing-merge-headaches-git-meets.html
   conflictstyle = diff3
+
+  # The default merge commit message is fairly meaningless, so lets include
+  # a summary of what the merge includes
+  summary = true
 
 [push]
   # Only push the current branch you're on
