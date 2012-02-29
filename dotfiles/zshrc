@@ -10,7 +10,7 @@ ZSH_THEME="prose"
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins to load on startup
-plugins=(git brew vi-mode history-substring-search)
+plugins=(git brew history-substring-search)
 
 # And... perform setup of oh-my-zsh!
 source $ZSH/oh-my-zsh.sh
