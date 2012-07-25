@@ -1,4 +1,5 @@
 fb objc_exception_throw
 fb objc_autoreleaseNoPool
+fb auto_refcount_underflow_error
 fb malloc_error_break
 set print element 0
