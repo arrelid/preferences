@@ -1,8 +1,0 @@
-# Usage: Create the symlink '~/.profile' and point it to this file
-# Author: Mattias Arrelid
-
-# Set the user mask for all newly created files
-umask 022
-
-# If there's an interactive bash shell, load .bashrc
-[ -n "$BASH_VERSION" ] && [ -f ~/.bashrc ] && . ~/.bashrc
