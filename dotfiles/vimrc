@@ -22,7 +22,6 @@ set statusline+=%c,\                             " Cursor column
 set statusline+=%l/%L                            " Cursor line/total lines
 set statusline+=\ %P                             " Percent through file
 
-let mapleader=","   " the leader key should be easy to type (',' is easier than '\')
 syntax on           " enable syntax highlighting depending on file type
 
 " Whitespacing and line/row breaks
