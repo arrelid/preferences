@@ -50,6 +50,10 @@ map <silent> <C-L> :set hlsearch! hlsearch?<CR>
 nnoremap j gj
 nnoremap k gk
 
+" Tell vim to look for tags in parent directories, according to...
+" http://stackoverflow.com/questions/5017500/vim-difficulty-setting-up-ctags-source-in-subdirectories-dont-see-tags-file-i
+set tags=tags;/
+
 " Allow saving of files as sudo when you forget to start vim using sudo.
 cmap w!! %!sudo tee > /dev/null %
 

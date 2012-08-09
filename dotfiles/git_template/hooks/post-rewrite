@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# One more hook that oftentimes gets overlooked: post-rewrite.
+# This is fired after git commit --amend and git rebase (the
+# former already being covered by post-commit).
+
+case "$1" in
+  rebase) exec .git/hooks/post-merge ;;
+esac

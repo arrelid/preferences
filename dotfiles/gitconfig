@@ -30,6 +30,9 @@
   uncommit = reset --soft HEAD^
   unstage = reset HEAD
 
+  # For easy re-generation of ctags for the current project
+  ctags = !.git/hooks/ctags
+
 [branch]
   autosetuprebase = always
 
@@ -68,3 +71,6 @@
 [user]
   name = Mattias Arrelid
   email = mattias@arrelid.com
+
+[init]
+  templatedir = ~/.git_template
