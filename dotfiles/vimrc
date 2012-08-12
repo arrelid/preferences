@@ -44,8 +44,11 @@ set smartcase   " ... unless they contain at least one capital letter
 " Tab completion behavior when opening files
 set wildmode=list:longest,list:full  " complete as much as possible, then full for each press on tab
 
-" Turn off hithe last search
-map <silent> <C-L> :set hlsearch! hlsearch?<CR>
+" Toggle hilighting of the last search
+map <silent> <C-L> :set hlsearch!<CR>
+
+" Toggle display of invisible characters
+map <silent> <leader>s :set nolist!<CR>
 
 " When moving around using j/k, jump _within_ wrapped lines too (since you probably don't want to skip an entire paragraph).
 nnoremap j gj
