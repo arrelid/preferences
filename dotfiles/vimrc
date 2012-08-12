@@ -10,6 +10,7 @@ set number                 " everyone loves row numbers
 set ruler                  " show information about current row/col
 set showcmd                " show useful information about the current state of keyboard input in normal mode
 set showtabline=2          " always show the tab bar
+set scrolloff=3            " Keep some context around the current line when scrolling
 
 " Change the statusline to show some more stuff than just the defaults
 set statusline=%f\ \                             " Relative file name
