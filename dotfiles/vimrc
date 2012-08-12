@@ -41,6 +41,9 @@ set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 
+" Expand '%%' in command mode to directory of current file - http://vimcasts.org/e/14
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
 " Tab completion behavior when opening files
 set wildmode=list:longest,list:full  " complete as much as possible, then full for each press on tab
 
@@ -91,6 +94,8 @@ endif
 
 " Command-T configuration
 let g:CommandTMaxHeight=15
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
 " Load matchit, which expands the functionality of the '%' command
 runtime macros/matchit.vim
