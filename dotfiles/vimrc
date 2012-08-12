@@ -58,6 +58,8 @@ nnoremap k gk
 " http://stackoverflow.com/questions/5017500/vim-difficulty-setting-up-ctags-source-in-subdirectories-dont-see-tags-file-i
 set tags=tags;/
 
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+
 " Allow saving of files as sudo when you forget to start vim using sudo.
 cmap w!! %!sudo tee > /dev/null %
 
@@ -73,6 +75,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'bitc/vim-bad-whitespace'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'mileszs/ack.vim'
+Bundle 'taglist.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
