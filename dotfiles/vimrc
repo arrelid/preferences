@@ -92,6 +92,9 @@ endif
 " Command-T configuration
 let g:CommandTMaxHeight=15
 
+" Load matchit, which expands the functionality of the '%' command
+runtime macros/matchit.vim
+
 " Use the solarized color scheme
 set background=dark
 let g:solarized_termcolors=256  " Fancy fallback so that you don't have to change your terminal's color scheme
