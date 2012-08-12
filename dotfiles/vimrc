@@ -74,8 +74,10 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Tabular'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bitc/vim-bad-whitespace'
+Bundle 'commentary.vim'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'mileszs/ack.vim'
 Bundle 'taglist.vim'
