@@ -15,7 +15,7 @@ alias  2-left-bottom    move screenOriginX;screenOriginY+screenSizeY*3/5        
 alias  2-bottom-center  move screenOriginX+screenSizeX*1/5;screenOriginY+screenSizeY*3/5    screenSizeX*2/5;screenSizeY*2/5  ${mon-dell}
 alias  1-main           move screenOriginX;screenOriginY                                    screenSizeX;screenSizeY          ${mon-builtin}
 alias  1-left           move screenOriginX;screenOriginY                                    screenSizeX/2;screenSizeY        ${mon-builtin}
-alias  1-right          move screenOriginX+screenSizeX/3;screenOriginY                      screenSizeX*2/3;screenSizeY        ${mon-builtin}
+alias  1-right          move screenOriginX+screenSizeX/3;screenOriginY                      screenSizeX*2/3;screenSizeY      ${mon-builtin}
 alias  1-right-top      move screenOriginX+screenSizeX*2/3;screenOriginY                    screenSizeX/3;screenSizeY/2      ${mon-builtin}
 alias  1-right-bottom   move screenOriginX+screenSizeX*2/3;screenOriginY+screenSizeY/2      screenSizeX/3;screenSizeY/2      ${mon-builtin}
 
@@ -66,8 +66,8 @@ bind  down:shift;alt   nudge  +0    +10%
 
 # Throw bindings
 # NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
-bind  pad1:ctrl;alt       throw 0 resize
-bind  pad2:ctrl;alt       throw 1 resize
+bind  1:ctrl;alt          throw 0 resize
+bind  2:ctrl;alt          throw 1 resize
 bind  right:ctrl;alt;cmd  throw right resize
 bind  left:ctrl;alt;cmd   throw left  resize
 bind  up:ctrl;alt;cmd     throw up    resize
@@ -83,8 +83,8 @@ bind  up:cmd;alt    focus behind
 bind  down:cmd;alt  focus behind
 
 # Layout bindings
-bind  pad1:ctrl  layout work1monitor
-bind  pad2:ctrl  layout work2monitors
+bind  1:ctrl  layout work1monitor
+bind  2:ctrl  layout work2monitors
 
 # Window Hints
 bind esc:cmd hint
