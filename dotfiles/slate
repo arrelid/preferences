@@ -10,9 +10,9 @@ alias mon-dell    2560x1600
 # Position aliases
 alias  2-right-top      move screenOriginX+screenSizeX*3/5;screenOriginY                    screenSizeX*2/5;screenSizeY/2    ${mon-dell}
 alias  2-right-bottom   move screenOriginX+screenSizeX*3/5;screenOriginY+screenSizeY/2      screenSizeX*2/5;screenSizeY/2    ${mon-dell}
-alias  2-left-top       move screenOriginX;screenOriginY                                    screenSizeX*3/5;screenSizeY*3/4  ${mon-dell}
-alias  2-left-bottom    move screenOriginX;screenOriginY+screenSizeY*3/4                    screenSizeX*1/5;screenSizeY*1/4  ${mon-dell}
-alias  2-bottom-center  move screenOriginX+screenSizeX*1/5;screenOriginY+screenSizeY*3/4    screenSizeX*2/5;screenSizeY*1/4  ${mon-dell}
+alias  2-left-top       move screenOriginX;screenOriginY                                    screenSizeX*3/5;screenSizeY*3/5  ${mon-dell}
+alias  2-left-bottom    move screenOriginX;screenOriginY+screenSizeY*3/5                    screenSizeX*1/5;screenSizeY*2/5  ${mon-dell}
+alias  2-bottom-center  move screenOriginX+screenSizeX*1/5;screenOriginY+screenSizeY*3/5    screenSizeX*2/5;screenSizeY*2/5  ${mon-dell}
 alias  1-main           move screenOriginX;screenOriginY                                    screenSizeX;screenSizeY          ${mon-builtin}
 alias  1-left           move screenOriginX;screenOriginY                                    screenSizeX/2;screenSizeY        ${mon-builtin}
 alias  1-right          move screenOriginX+screenSizeX/3;screenOriginY                      screenSizeX*2/3;screenSizeY        ${mon-builtin}
