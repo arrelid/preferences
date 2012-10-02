@@ -1,0 +1,91 @@
+# Configs
+config  defaultToCurrentScreen  true
+config  nudgePercentOf          screenSize
+config  resizePercentOf         screenSize
+
+# Monitor aliases
+alias mon-builtin 1440x900
+alias mon-dell    2560x1600
+
+# Position aliases
+alias  2-right-top      move screenOriginX+screenSizeX*3/5;screenOriginY                    screenSizeX*2/5;screenSizeY/2    ${mon-dell}
+alias  2-right-bottom   move screenOriginX+screenSizeX*3/5;screenOriginY+screenSizeY/2      screenSizeX*2/5;screenSizeY/2    ${mon-dell}
+alias  2-left-top       move screenOriginX;screenOriginY                                    screenSizeX*3/5;screenSizeY*3/4  ${mon-dell}
+alias  2-left-bottom    move screenOriginX;screenOriginY+screenSizeY*3/4                    screenSizeX*1/5;screenSizeY*1/4  ${mon-dell}
+alias  2-bottom-center  move screenOriginX+screenSizeX*1/5;screenOriginY+screenSizeY*3/4    screenSizeX*2/5;screenSizeY*1/4  ${mon-dell}
+alias  1-main           move screenOriginX;screenOriginY                                    screenSizeX;screenSizeY          ${mon-builtin}
+alias  1-left           move screenOriginX;screenOriginY                                    screenSizeX/2;screenSizeY        ${mon-builtin}
+alias  1-right          move screenOriginX+screenSizeX/3;screenOriginY                      screenSizeX*2/3;screenSizeY        ${mon-builtin}
+alias  1-right-top      move screenOriginX+screenSizeX*2/3;screenOriginY                    screenSizeX/3;screenSizeY/2      ${mon-builtin}
+alias  1-right-bottom   move screenOriginX+screenSizeX*2/3;screenOriginY+screenSizeY/2      screenSizeX/3;screenSizeY/2      ${mon-builtin}
+
+# 2 monitor layout
+layout  work2monitors  'Google Chrome'  ${2-left-top}
+layout  work2monitors  'iTerm'          ${2-right-top}
+layout  work2monitors  'MacVim'         ${2-right-bottom}
+layout  work2monitors  'nvALT'          ${2-bottom-center}
+layout  work2monitors  'Spotify'        ${1-main}
+layout  work2monitors  'Tweetbot'       ${2-left-bottom}
+
+# 1 monitor layout
+layout  work1monitor  'Google Chrome'  ${1-main}
+layout  work1monitor  'iTerm'          ${1-left}
+layout  work1monitor  'MacVim'         ${1-right}
+layout  work1monitor  'nvALT'          ${1-right-top}
+layout  work1monitor  'Spotify'        ${1-main}
+layout  work1monitor  'Tweetbot'       ${1-right-bottom}
+
+# Default layouts
+default work2monitors resolutions:${mon-dell};${mon-builtin}
+default work1monitor  resolutions:${mon-builtin}
+
+# Resize bindings
+# NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
+bind  right:alt       resize  +10%  +0
+bind  left:alt        resize  -10%  +0
+bind  up:alt          resize  +0    -10%
+bind  down:alt        resize  +0    +10%
+bind  right:ctrl;alt  resize  -10%  +0 bottom-right
+bind  left:ctrl;alt   resize  +10%  +0 bottom-right
+bind  up:ctrl;alt     resize  +0    +10% bottom-right
+bind  down:ctrl;alt   resize  +0    -10% bottom-right
+
+# Push bindings
+# NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
+bind  right:ctrl;cmd  push right  bar-resize:screenSizeX/3
+bind  left:ctrl;cmd   push left   bar-resize:screenSizeX/3
+bind  up:ctrl;cmd     push up     bar-resize:screenSizeY/2
+bind  down:ctrl;cmd   push down   bar-resize:screenSizeY/2
+
+# Nudge bindings
+# NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
+bind  right:shift;alt  nudge  +10%  +0
+bind  left:shift;alt   nudge  -10%  +0
+bind  up:shift;alt     nudge  +0    -10%
+bind  down:shift;alt   nudge  +0    +10%
+
+# Throw bindings
+# NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
+bind  pad1:ctrl;alt       throw 2 resize
+bind  pad2:ctrl;alt       throw 1 resize
+bind  pad3:ctrl;alt       throw 0 resize
+bind  right:ctrl;alt;cmd  throw right resize
+bind  left:ctrl;alt;cmd   throw left  resize
+bind  up:ctrl;alt;cmd     throw up    resize
+bind  down:ctrl;alt;cmd   throw down  resize
+
+# Focus bindings
+# NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
+bind  right:cmd     focus right
+bind  left:cmd      focus left
+bind  up:cmd        focus up
+bind  down:cmd      focus down
+bind  up:cmd;alt    focus behind
+bind  down:cmd;alt  focus behind
+
+# Layout bindings
+bind  pad1:ctrl  layout work1monitor
+bind  pad2:ctrl  layout work2monitors
+
+# Window Hints
+bind esc:cmd hint
