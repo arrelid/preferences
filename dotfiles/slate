@@ -16,8 +16,8 @@ alias  2-bottom-center  move screenOriginX+screenSizeX*1/5;screenOriginY+screenS
 alias  1-main           move screenOriginX;screenOriginY                                    screenSizeX;screenSizeY          ${mon-builtin}
 alias  1-left           move screenOriginX;screenOriginY                                    screenSizeX/2;screenSizeY        ${mon-builtin}
 alias  1-right          move screenOriginX+screenSizeX/3;screenOriginY                      screenSizeX*2/3;screenSizeY      ${mon-builtin}
-alias  1-right-top      move screenOriginX+screenSizeX*2/3;screenOriginY                    screenSizeX/3;screenSizeY/2      ${mon-builtin}
-alias  1-right-bottom   move screenOriginX+screenSizeX*2/3;screenOriginY+screenSizeY/2      screenSizeX/3;screenSizeY/2      ${mon-builtin}
+alias  1-right-top      move screenOriginX+screenSizeX*2/3;screenOriginY                    screenSizeX/3;screenSizeY        ${mon-builtin}
+alias  1-right-bottom   move screenOriginX+screenSizeX*2/3;screenOriginY                    screenSizeX/3;screenSizeY        ${mon-builtin}
 
 # 2 monitor layout
 layout  work2monitors  'Google Chrome'  ${2-left-top}
@@ -75,12 +75,12 @@ bind  down:ctrl;alt;cmd   throw down  resize
 
 # Focus bindings
 # NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
-bind  right:cmd     focus right
-bind  left:cmd      focus left
-bind  up:cmd        focus up
-bind  down:cmd      focus down
-bind  up:cmd;alt    focus behind
-bind  down:cmd;alt  focus behind
+bind  right:ctrl;alt;shift     focus right
+bind  left:ctrl;alt;shift      focus left
+bind  up:ctrl;alt;shift        focus up
+bind  down:ctrl;alt;shift      focus down
+bind  up:cmd;alt;shift;ctrl    focus behind
+bind  down:cmd;alt;shift;ctrl  focus behind
 
 # Layout bindings
 bind  1:ctrl  layout work1monitor
