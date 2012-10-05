@@ -20,20 +20,20 @@ alias  1-right-top      move screenOriginX+screenSizeX*2/3;screenOriginY        
 alias  1-right-bottom   move screenOriginX+screenSizeX*2/3;screenOriginY                    screenSizeX/3;screenSizeY        ${mon-builtin}
 
 # 2 monitor layout
-layout  work2monitors  'Google Chrome'  ${2-left-top}
-layout  work2monitors  'iTerm'          ${2-right-top}
-layout  work2monitors  'MacVim'         ${2-right-bottom}
-layout  work2monitors  'nvALT'          ${2-bottom-center}
-layout  work2monitors  'Spotify'        ${1-main}
-layout  work2monitors  'Tweetbot'       ${2-left-bottom}
+layout  work2monitors  'Google Chrome':REPEAT  ${2-left-top}
+layout  work2monitors  'iTerm':REPEAT          ${2-right-top}
+layout  work2monitors  'MacVim':REPEAT         ${2-right-bottom}
+layout  work2monitors  'nvALT':REPEAT          ${2-bottom-center}
+layout  work2monitors  'Spotify':REPEAT        ${1-main}
+layout  work2monitors  'Tweetbot':REPEAT       ${2-left-bottom}
 
 # 1 monitor layout
-layout  work1monitor  'Google Chrome'  ${1-main}
-layout  work1monitor  'iTerm'          ${1-left}
-layout  work1monitor  'MacVim'         ${1-right}
-layout  work1monitor  'nvALT'          ${1-right-top}
-layout  work1monitor  'Spotify'        ${1-main}
-layout  work1monitor  'Tweetbot'       ${1-right-bottom}
+layout  work1monitor  'Google Chrome':REPEAT  ${1-main}
+layout  work1monitor  'iTerm':REPEAT          ${1-left}
+layout  work1monitor  'MacVim':REPEAT         ${1-right}
+layout  work1monitor  'nvALT':REPEAT          ${1-right-top}
+layout  work1monitor  'Spotify':REPEAT        ${1-main}
+layout  work1monitor  'Tweetbot':REPEAT       ${1-right-bottom}
 
 # Default layouts
 default work2monitors resolutions:${mon-dell};${mon-builtin}
