@@ -41,14 +41,14 @@ default work1monitor  resolutions:${mon-builtin}
 
 # Resize bindings
 # NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
-bind  right:alt       resize  +10%  +0
-bind  left:alt        resize  -10%  +0
-bind  up:alt          resize  +0    -10%
-bind  down:alt        resize  +0    +10%
-bind  right:ctrl;alt  resize  -10%  +0 bottom-right
-bind  left:ctrl;alt   resize  +10%  +0 bottom-right
-bind  up:ctrl;alt     resize  +0    +10% bottom-right
-bind  down:ctrl;alt   resize  +0    -10% bottom-right
+bind  right:alt;cmd;shift       resize  +10%  +0
+bind  left:alt;cmd;shift        resize  -10%  +0
+bind  up:alt;cmd;shift          resize  +0    -10%
+bind  down:alt;cmd;shift        resize  +0    +10%
+bind  right:ctrl;alt;cmd;shift  resize  -10%  +0 bottom-right
+bind  left:ctrl;alt;cmd;shift   resize  +10%  +0 bottom-right
+bind  up:ctrl;alt;cmd;shift     resize  +0    +10% bottom-right
+bind  down:ctrl;alt;cmd;shift   resize  +0    -10% bottom-right
 
 # Push bindings
 # NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
@@ -56,13 +56,6 @@ bind  right:ctrl;cmd  push right  bar-resize:screenSizeX/3
 bind  left:ctrl;cmd   push left   bar-resize:screenSizeX/3
 bind  up:ctrl;cmd     push up     bar-resize:screenSizeY/2
 bind  down:ctrl;cmd   push down   bar-resize:screenSizeY/2
-
-# Nudge bindings
-# NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
-bind  right:shift;alt  nudge  +10%  +0
-bind  left:shift;alt   nudge  -10%  +0
-bind  up:shift;alt     nudge  +0    -10%
-bind  down:shift;alt   nudge  +0    +10%
 
 # Throw bindings
 # NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
@@ -79,8 +72,6 @@ bind  right:ctrl;alt;shift     focus right
 bind  left:ctrl;alt;shift      focus left
 bind  up:ctrl;alt;shift        focus up
 bind  down:ctrl;alt;shift      focus down
-bind  up:cmd;alt;shift;ctrl    focus behind
-bind  down:cmd;alt;shift;ctrl  focus behind
 
 # Layout bindings
 bind  1:ctrl  layout work1monitor
