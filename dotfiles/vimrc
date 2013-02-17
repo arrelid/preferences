@@ -78,7 +78,7 @@ Bundle 'Tabular'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bitc/vim-bad-whitespace'
 Bundle 'commentary.vim'
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'taglist.vim'
 Bundle 'tpope/vim-fugitive'
@@ -94,11 +94,6 @@ if has("autocmd")
   autocmd FileType c,cpp,objc setlocal ts=2 sts=2 sw=2 expandtab nowrap
 endif
 
-" Command-T configuration
-let g:CommandTMaxHeight=15
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
-
 " Load matchit, which expands the functionality of the '%' command
 runtime macros/matchit.vim
 
@@ -106,3 +101,7 @@ runtime macros/matchit.vim
 set background=dark
 let g:solarized_termcolors=256  " Fancy fallback so that you don't have to change your terminal's color scheme
 colorscheme solarized
+
+" Configure ctrl-p
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
