@@ -22,3 +22,6 @@ export LANG='en_US.UTF-8'
 
 # Add custom paths to our $PATH
 export PATH=/usr/local/share/python:/usr/local/bin:/usr/local/sbin:/usr/sbin:$PATH
+
+# Custom aliases
+alias l='ls -al'
