@@ -33,6 +33,9 @@
   # For easy re-generation of ctags for the current project
   ctags = !.git/hooks/ctags
 
+  # For easy grepping of submodules
+  sgrep = "!f() { git grep \"$1\"; git submodule foreach \"git grep '$1'; true\" | grep -B 1 \"$1\"; }; f"
+
 [branch]
   autosetuprebase = always
 
