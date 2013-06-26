@@ -40,8 +40,14 @@ var righthalf = slate.operation("move", {
 
 var grid = slate.operation("grid", {
   "grids" : {
+    // MacBook Pro Retina
     "1440x900" : {
       "width" : 5,
+      "height" : 3
+    },
+    // iMac
+    "2560x1440" : {
+      "width" : 7,
       "height" : 3
     }
   },
