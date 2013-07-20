@@ -95,7 +95,9 @@ colorscheme solarized
 
 " Configure ctrl-p
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlPLastMode --dir'                        " Remember the last mode _and_ original directory instead of defaulting to some specific mode
+let g:ctrlp_extensions = ['line', 'dir', 'buffertag', 'tag']   " Enable extensions
+let g:ctrlp_by_filename = 1                                    " Search by filename only by default (toggle with <c-d>)
 
 " Configure airline
 let g:airline_enable_fugitive=1
