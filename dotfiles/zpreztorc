@@ -33,7 +33,7 @@ zstyle ':prezto:module:editor:info:completing' format '...'
 # zstyle ':prezto:module:git:status:ignore' submodules 'all'
 
 # Prompt
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'steeef'
 
 # Syntax Highlighting
 # Set syntax highlighters.
