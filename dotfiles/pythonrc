@@ -1,8 +1,0 @@
-import rlcompleter, readline, sys
-readline.parse_and_bind("bind ^I rl_complete")
-class Prompt:
-  def __init__(self, str='>>>'):
-    self.str = str;
-  def __str__(self):
-    return self.str
-sys.ps1 = Prompt(">>> ")
