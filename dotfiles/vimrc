@@ -31,6 +31,9 @@ set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 
+" Share the clipboard contents with Mac OS X
+set clipboard=unnamed
+
 " Expand '%%' in command mode to directory of current file - http://vimcasts.org/e/14
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
