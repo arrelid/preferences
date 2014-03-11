@@ -53,6 +53,9 @@
   # Perform GC automagically, when needed
   auto = 1
 
+[grep]
+  linenumber = true
+
 [merge]
   # Show common ancestor when merge fails
   # http://psung.blogspot.com/2011/02/reducing-merge-headaches-git-meets.html
