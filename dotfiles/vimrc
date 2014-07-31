@@ -61,26 +61,27 @@ cmap w!! %!sudo tee > /dev/null %
 
 " Setup vundle
 filetype off                                  " Required
-set rtp+=~/.vim/bundle/vundle/                " Make sure to clone vundle.git here first
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/            " Make sure to clone vundle.git here first
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle'
 
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Tabular'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'bitc/vim-bad-whitespace'
-Bundle 'bling/vim-airline'
-Bundle 'commentary.vim'
-Bundle 'ctrlp.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'taglist.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Tabular'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bitc/vim-bad-whitespace'
+Plugin 'bling/vim-airline'
+Plugin 'commentary.vim'
+Plugin 'ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'taglist.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
 
 " Vundle setup complete, reset filetype
+call vundle#end()
 filetype plugin indent on
 
 if has("autocmd")
