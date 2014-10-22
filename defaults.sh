@@ -50,6 +50,9 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Disable sound effects when changing volume
 defaults write -g com.apple.sound.beep.feedback -integer 0
 
+# Disable sounds effects for user interface changes
+defaults write "com.apple.systemsound" "com.apple.sound.uiaudio.enabled" -int 0
+
 # Show the status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
 
