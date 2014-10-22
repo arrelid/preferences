@@ -2,7 +2,11 @@
 
 # Credit where credit is due: https://github.com/robb/.dotfiles
 
-# Use AirDrop over every interface.
+# Disable the new window animation - every new window grows
+# from a small one to a big one over a few hundred millisecs
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+# Use AirDrop over every network interface and on unsupported Macs.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 
 # Expand save panel by default.
@@ -16,6 +20,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Set keyboard repeat rate to "damn fast".
 defaults write NSGlobalDomain KeyRepeat -int 0
+
+# Set a shorter delay until key repeat
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
@@ -36,3 +43,18 @@ defaults write com.apple.dock orientation -string "right"
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+
+# Use current directory as default search scope in Finder
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Disable sound effects when changing volume
+defaults write -g com.apple.sound.beep.feedback -integer 0
+
+# Show the status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Show the ~/Library folder
+chflags nohidden ~/Library
+
+# Show absolute path in Finder's title bar.
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
