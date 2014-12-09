@@ -25,6 +25,9 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Disable sound effects when changing volume
 defaults write NSGlobalDomain com.apple.sound.beep.feedback -integer 0
 
+# Use a dark menu bar / dock
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
