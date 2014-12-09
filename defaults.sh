@@ -28,12 +28,24 @@ defaults write NSGlobalDomain com.apple.sound.beep.feedback -integer 0
 # Use a dark menu bar / dock
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
+# English and Swedish is enough for now...
+defaults write NSGlobalDomain AppleLanguages -array "en" "sv"
+
+# Allow fast user switching (icon style, in the menu bar)
+defaults write NSGlobalDomain userMenuExtraStyle -int 2
+
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
+# New Finder windows points to home
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+
 # Allow text selection in Quick Look
 defaults write com.apple.finder QLEnableTextSelection -bool true
+
+# Disable the warning before emptying the Trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -53,6 +65,9 @@ defaults write com.apple.dock orientation -string "right"
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
+# Enable scroll gesture (with modifier) to zoom
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+
 # Disable sounds effects for user interface changes
 defaults write com.apple.systemsound com.apple.sound.uiaudio.enabled -int 0
 
@@ -61,6 +76,12 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 
 # Don't create dreaded .DS_Store files.
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Allow tap to click for the Apple Magic Trackpad
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+
+# Set the Apple Mouse in two button mode (left _and_ right click possible)
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string "TwoButton"
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
