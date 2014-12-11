@@ -77,6 +77,3 @@
 [user]
   name = Mattias Arrelid
   email = mattias@arrelid.com
-
-[init]
-  templatedir = ~/.git_template
