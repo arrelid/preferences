@@ -13,10 +13,10 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
 # Set keyboard repeat rate to "damn fast".
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Set a shorter delay until key repeat
-defaults write NSGlobalDomain InitialKeyRepeat -int 12
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
