@@ -77,8 +77,9 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 # Don't create dreaded .DS_Store files.
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-# Allow tap to click for the Apple Magic Trackpad
+# Allow tap to click for Apple trackpad devices
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 
 # Set the Apple Mouse in two button mode (left _and_ right click possible)
 defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string "TwoButton"
