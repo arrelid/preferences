@@ -40,15 +40,20 @@ var righthalf = slate.operation("move", {
 
 var grid = slate.operation("grid", {
   "grids" : {
-    // MacBook Pro Retina
+    // MacBook Pro Retina 13"
+    "1280x800" : {
+      "width" : 4,
+      "height" : 2
+    },
+    // MacBook Pro Retina 15"
     "1440x900" : {
-      "width" : 5,
-      "height" : 3
+      "width" : 6,
+      "height" : 2
     },
     // iMac
     "2560x1440" : {
-      "width" : 7,
-      "height" : 3
+      "width" : 8,
+      "height" : 4
     }
   },
   "padding" : 5
@@ -56,13 +61,14 @@ var grid = slate.operation("grid", {
 
 slate.bind("esc:alt;ctrl", slate.operation("relaunch"));
 slate.bind("esc:cmd", fullscreen);
-slate.bind("esc:alt", grid);
-slate.bind("esc:ctrl", slate.operation("hint"));
+slate.bind("esc:ctrl", grid);
+slate.bind("esc:alt", slate.operation("hint"));
 
-slate.bind("right:ctrl;alt;cmd", slate.operation("focus", { "direction" : "right" }));
-slate.bind("left:ctrl;alt;cmd", slate.operation("focus", { "direction" : "left" }));
-slate.bind("up:ctrl;alt;cmd", slate.operation("focus", { "direction" : "up" }));
-slate.bind("down:ctrl;alt;cmd", slate.operation("focus", { "direction" : "down" }));
+slate.bind("down:ctrl;alt;cmd", slate.operation("throw", {
+  "screen" : "next",
+  "width" : "screenSizeX",
+  "height" : "screenSizeY"
+}));
 
 slate.bind("j:cmd;alt", lefthalf);
 slate.bind("k:cmd;alt", tophalf);
