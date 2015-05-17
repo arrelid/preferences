@@ -65,6 +65,10 @@
   # a summary of what the merge includes
   summary = true
 
+[pull]
+  # Always rebase on merge
+  rebase = true
+
 [push]
   # Only push the current branch you're on
   default = tracking
