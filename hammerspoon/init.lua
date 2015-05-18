@@ -1,22 +1,24 @@
--- Manipulation of window position(s)
+-- Manipulation of window position and size
 function resizeFrontmostApplication(layout)
   hs.application.frontmostApplication():focusedWindow():moveToUnit(layout, 0)
 end
-
-hs.hotkey.bind({"cmd"}, "escape", function()
-  resizeFrontmostApplication(hs.layout.maximized)
-end)
 
 hs.hotkey.bind({"cmd", "alt"}, "j", function()
   resizeFrontmostApplication(hs.layout.left50)
 end)
 
+hs.hotkey.bind({"cmd", "alt"}, "k", function()
+  resizeFrontmostApplication(hs.layout.maximized)
+end)
+
+hs.hotkey.bind({"cmd", "alt"}, "l", function()
+  local focusedWindow = hs.application.frontmostApplication():focusedWindow()
+  focusedWindow:moveToScreen(focusedWindow:screen():next(), 0)
+end)
+
 hs.hotkey.bind({"cmd", "alt"}, ";", function()
   resizeFrontmostApplication(hs.layout.right50)
 end)
-
--- TBD: Throwing a window between the currently connected screens...
---
 
 -- Triggering system lock + screen saver
 hs.hotkey.bind({"cmd", "shift"}, "s", function()
