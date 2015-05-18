@@ -104,10 +104,8 @@ let g:ctrlp_extensions = ['line', 'dir', 'buffertag', 'tag']   " Enable extensio
 let g:ctrlp_by_filename = 1                                    " Search by filename only by default (toggle with <c-d>)
 
 " Configure airline
-let g:airline_enable_fugitive=1
 let g:airline_theme='solarized'
-let g:airline_powerline_fonts=1
 let g:airline_section_c = '%F'
 
 " Set the default font for vim GUIs
-set guifont=Inconsolata\ for\ Powerline:h12
+set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h10
