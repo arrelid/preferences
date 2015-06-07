@@ -71,9 +71,9 @@ if is-callable 'dircolors'; then
       eval "$(dircolors --sh)"
     fi
 
-    alias ls="$aliases[ls] --color=auto"
+    alias ls="${aliases[ls]:-ls} --color=auto"
   else
-    alias ls="$aliases[ls] -F"
+    alias ls="${aliases[ls]:-ls} -F"
   fi
 else
   # BSD Core Utilities
@@ -84,9 +84,9 @@ else
     # Define colors for the completion system.
     export LS_COLORS='di=36;40:ln=35;40:so=31;:pi=0;:ex=1;;40:bd=0;:cd=37;:su=37;:sg=0;:tw=0;:ow=0;:'
 
-    alias ls='ls -G'
+    alias ls="${aliases[ls]:-ls} -G"
   else
-    alias ls='ls -F'
+    alias ls="${aliases[ls]:-ls} -F"
   fi
 fi
 
@@ -107,7 +107,7 @@ if zstyle -t ':prezto:module:utility:grep' color; then
   export GREP_COLOR='37;45'           # BSD.
   export GREP_COLORS="mt=$GREP_COLOR" # GNU.
 
-  alias grep="$aliases[grep] --color=auto"
+  alias grep="${aliases[grep]:-grep} --color=auto"
 fi
 
 # Mac OS X Everywhere
