@@ -30,9 +30,6 @@
   uncommit = reset --soft HEAD^
   unstage = reset HEAD
 
-  # For easy re-generation of ctags for the current project
-  ctags = !.git/hooks/ctags
-
   # For easy grepping of submodules
   sgrep = "!f() { git grep \"$1\"; git submodule foreach \"git grep '$1'; true\" | grep -B 1 \"$1\"; }; f"
 
@@ -71,7 +68,7 @@
 
 [push]
   # Only push the current branch you're on
-  default = tracking
+  default = simple
 
 [rerere]
   # Reuse previously recorded merge solution
