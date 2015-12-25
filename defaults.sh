@@ -77,6 +77,9 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 # Don't create dreaded .DS_Store files.
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+# Don't want Photos.app to open up as soon as you plug something in?
+defaults write com.apple.ImageCapture disableHotPlug -bool YES
+
 # Allow tap to click for Apple trackpad devices
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
