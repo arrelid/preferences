@@ -31,6 +31,9 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 # English and Swedish is enough for now...
 defaults write NSGlobalDomain AppleLanguages -array "en" "sv"
 
+# Use plain text for new documents in TextEdit.app
+defaults write com.apple.TextEdit RichText -bool false
+
 # Allow fast user switching (icon style, in the menu bar)
 defaults write NSGlobalDomain userMenuExtraStyle -int 2
 
