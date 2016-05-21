@@ -110,5 +110,8 @@ let g:ctrlp_by_filename = 1                                    " Search by filen
 let g:airline_theme='solarized'
 let g:airline_section_c = '%F'
 
+" Configure markdown
+let g:vim_markdown_folding_disabled = 1
+
 " Set the default font for vim GUIs
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h10
