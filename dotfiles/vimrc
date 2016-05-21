@@ -69,9 +69,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Tabular'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'       " For airline colorscheme solarized
+Plugin 'altercation/vim-colors-solarized'     " For colorscheme solarized
 Plugin 'bitc/vim-bad-whitespace'
-Plugin 'bling/vim-airline'
 Plugin 'commentary.vim'
 Plugin 'ctrlp.vim'
 Plugin 'mileszs/ack.vim'
