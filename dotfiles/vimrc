@@ -64,7 +64,8 @@ filetype off                                  " Required
 set rtp+=~/.vim/bundle/Vundle.vim/            " Make sure to clone vundle.git here first
 call vundle#begin()
 
-Plugin 'gmarik/Vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Tabular'
