@@ -81,6 +81,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'plasticboy/vim-markdown'
 
 " Vundle setup complete, reset filetype
 call vundle#end()
