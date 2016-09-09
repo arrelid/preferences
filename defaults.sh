@@ -28,6 +28,9 @@ defaults write NSGlobalDomain com.apple.sound.beep.feedback -integer 0
 # Disable sounds effects for user interface changes
 defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -int 0
 
+# Set alert volume to 0
+defaults write NSGlobalDomain com.apple.sound.beep.volume -float 0.0
+
 # Use a dark menu bar / dock
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
