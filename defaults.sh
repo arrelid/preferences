@@ -25,6 +25,9 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Disable sound effects when changing volume
 defaults write NSGlobalDomain com.apple.sound.beep.feedback -integer 0
 
+# Disable sounds effects for user interface changes
+defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -int 0
+
 # Use a dark menu bar / dock
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
@@ -71,12 +74,6 @@ defaults write com.apple.dock autohide -bool true
 # Enable scroll gesture (with modifier) to zoom
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 
-# Disable sounds effects for user interface changes
-defaults write com.apple.systemsound com.apple.sound.uiaudio.enabled -int 0
-
-# Use AirDrop over every network interface and on unsupported Macs.
-defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
-
 # Don't create dreaded .DS_Store files.
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
@@ -86,9 +83,6 @@ defaults write com.apple.ImageCapture disableHotPlug -bool YES
 # Allow tap to click for Apple trackpad devices
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-
-# Set the Apple Mouse in two button mode (left _and_ right click possible)
-defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string "TwoButton"
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
