@@ -68,6 +68,9 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Show absolute path in Finder's title bar.
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
 # Move Dock to the right
 defaults write com.apple.dock orientation -string "right"
 
