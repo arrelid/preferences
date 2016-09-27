@@ -43,6 +43,12 @@ defaults write com.apple.TextEdit RichText -bool false
 # Allow fast user switching (icon style, in the menu bar)
 defaults write NSGlobalDomain userMenuExtraStyle -int 2
 
+# Don't show Siri in the menu bar
+defaults write com.apple.Siri StatusMenuVisible -bool false
+
+# Hold Command + Space to invoke Siri
+defaults write com.apple.Siri HotkeyTag -int 2
+
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
