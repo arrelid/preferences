@@ -50,6 +50,8 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
 
+# Always show the tab bar
+defaults write com.apple.Terminal ShowTabBar -bool true
 
 # Don't show Siri in the menu bar
 defaults write com.apple.Siri StatusMenuVisible -bool false
