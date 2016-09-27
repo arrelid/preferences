@@ -43,6 +43,9 @@ defaults write com.apple.TextEdit RichText -bool false
 # Allow fast user switching (icon style, in the menu bar)
 defaults write NSGlobalDomain userMenuExtraStyle -int 2
 
+# Show the Develop menu in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+
 # Don't show Siri in the menu bar
 defaults write com.apple.Siri StatusMenuVisible -bool false
 
