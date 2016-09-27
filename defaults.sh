@@ -46,6 +46,11 @@ defaults write NSGlobalDomain userMenuExtraStyle -int 2
 # Show the Develop menu in Safari
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 
+# Use Pro as the default/startup profile
+defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
+
+
 # Don't show Siri in the menu bar
 defaults write com.apple.Siri StatusMenuVisible -bool false
 
