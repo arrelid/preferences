@@ -37,6 +37,9 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 # English and Swedish is enough for now...
 defaults write NSGlobalDomain AppleLanguages -array "en" "sv"
 
+# Show the keyboard viewer & emoji/symbol picker in the input menu in the menu bar
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ "Bundle ID" = "com.apple.CharacterPaletteIM"; InputSourceKind = "Non Keyboard Input Method"; }' '{ "Bundle ID" = "com.apple.KeyboardViewer"; InputSourceKind = "Non Keyboard Input Method"; }'
+
 # Use plain text for new documents in TextEdit.app
 defaults write com.apple.TextEdit RichText -bool false
 
