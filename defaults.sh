@@ -113,6 +113,9 @@ defaults write com.apple.dock orientation -string "right"
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
+# Automatically hide and show the system menu bar
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+
 # Enable scroll gesture (with modifier) to zoom
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 
