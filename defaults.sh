@@ -37,25 +37,11 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 # English and Swedish is enough for now...
 defaults write NSGlobalDomain AppleLanguages -array "en-SE" "sv-SE"
 
-# Setup input sources (US, Swedish Pro, Character Viewer & Keyboard Viewer)
-defaults delete com.apple.HIToolbox AppleCurrentKeyboardLayoutInputSourceID
+# Setup input sources to include Character Viewer & Keyboard Viewer
 defaults delete com.apple.HIToolbox AppleEnabledInputSources
-defaults delete com.apple.HIToolbox AppleSelectedInputSources
-defaults delete com.apple.HIToolbox AppleInputSourceHistory
-
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ "Bundle ID" = "com.apple.PressAndHold"; InputSourceKind = "Non Keyboard Input Method"; }'
 defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ "Bundle ID" = "com.apple.CharacterPaletteIM"; InputSourceKind = "Non Keyboard Input Method"; }'
 defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ "Bundle ID" = "com.apple.KeyboardViewer"; InputSourceKind = "Non Keyboard Input Method"; }'
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ InputSourceKind = "Keyboard Layout"; "KeyboardLayout ID" = 7; "KeyboardLayout Name" = "Swedish - Pro"; }'
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ InputSourceKind = "Keyboard Layout"; "KeyboardLayout ID" = 0; "KeyboardLayout Name" = "U.S."; }'
 
-defaults write com.apple.HIToolbox AppleSelectedInputSources -array-add '{ "Bundle ID" = "com.apple.PressAndHold"; InputSourceKind = "Non Keyboard Input Method"; }'
-defaults write com.apple.HIToolbox AppleSelectedInputSources -array-add '{ InputSourceKind = "Keyboard Layout"; "KeyboardLayout ID" = 0; "KeyboardLayout Name" = "U.S."; }'
-
-defaults write com.apple.HIToolbox AppleInputSourceHistory -array-add '{ InputSourceKind = "Keyboard Layout"; "KeyboardLayout ID" = 7; "KeyboardLayout Name" = "Swedish - Pro"; }'
-defaults write com.apple.HIToolbox AppleInputSourceHistory -array-add '{ InputSourceKind = "Keyboard Layout"; "KeyboardLayout ID" = 0; "KeyboardLayout Name" = "U.S."; }'
-
-defaults write com.apple.HIToolbox AppleCurrentKeyboardLayoutInputSourceID -string "com.apple.keylayout.US"
 
 # Use plain text for new documents in TextEdit.app
 defaults write com.apple.TextEdit RichText -bool false
