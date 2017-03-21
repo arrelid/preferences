@@ -34,6 +34,9 @@ defaults write NSGlobalDomain com.apple.sound.beep.volume -float 0.0
 # Show volume in the menu bar
 defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -int 0
 
+# Show Bluetooth in the menu bar
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -int 0
+
 # Use a dark menu bar / dock
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
