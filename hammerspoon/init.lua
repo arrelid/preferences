@@ -32,7 +32,6 @@ end)
 -- Reloading the Hammerspoon conf. should be a breeze
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "r", function()
   hs.reload()
-  hs.alert.show("Hammerspoon configuration (re)loaded")
 end)
 
 -- Caffeine-esque functionality (without the need for a dedicated app)
