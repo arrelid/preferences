@@ -12,12 +12,12 @@ hs.hotkey.bind({"cmd", "alt"}, "k", function()
 end)
 
 hs.hotkey.bind({"cmd", "alt"}, "l", function()
-  local focusedWindow = hs.application.frontmostApplication():focusedWindow()
-  focusedWindow:moveToScreen(focusedWindow:screen():next(), 0)
+  resizeFrontmostApplication(hs.layout.right50)
 end)
 
 hs.hotkey.bind({"cmd", "alt"}, ";", function()
-  resizeFrontmostApplication(hs.layout.right50)
+  local focusedWindow = hs.application.frontmostApplication():focusedWindow()
+  focusedWindow:moveToScreen(focusedWindow:screen():next(), 0)
 end)
 
 -- Triggering system lock + screen saver
