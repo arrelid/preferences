@@ -56,6 +56,8 @@ if caffeine then
 end
 
 -- Switching windows through hints
+hs.hints.titleMaxSize = 30
+hs.hints.showTitleThresh = 30
 hs.hotkey.bind({"cmd", "shift"}, "\\", function()
   hs.hints.windowHints()
 end)
