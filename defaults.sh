@@ -83,9 +83,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # New Finder windows points to home
 defaults write com.apple.finder NewWindowTarget -string "PfHm"
 
-# Allow text selection in Quick Look
-defaults write com.apple.finder QLEnableTextSelection -bool true
-
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
