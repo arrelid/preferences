@@ -8,7 +8,7 @@ hs.hotkey.bind({"cmd", "alt"}, "j", function()
 end)
 
 hs.hotkey.bind({"cmd", "alt"}, "k", function()
-  resizeFrontmostApplication(hs.layout.maximized)
+  resizeFrontmostApplication(hs.geometry(0.25, 0, 0.5, 1))
 end)
 
 hs.hotkey.bind({"cmd", "alt"}, "l", function()
@@ -16,6 +16,10 @@ hs.hotkey.bind({"cmd", "alt"}, "l", function()
 end)
 
 hs.hotkey.bind({"cmd", "alt"}, ";", function()
+  resizeFrontmostApplication(hs.layout.maximized)
+end)
+
+hs.hotkey.bind({"cmd", "alt"}, "'", function()
   local focusedWindow = hs.application.frontmostApplication():focusedWindow()
   focusedWindow:moveToScreen(focusedWindow:screen():next(), 0)
 end)
