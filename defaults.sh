@@ -45,15 +45,6 @@ defaults write com.apple.screensaver "tokenRemovalAction" -int 0
 # Use a dark menu bar / dock
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
-# English and Swedish is enough for now...
-defaults write NSGlobalDomain AppleLanguages -array "en-SE" "sv-SE"
-
-# Setup input sources to include Character Viewer & Keyboard Viewer
-defaults delete com.apple.HIToolbox AppleEnabledInputSources
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ "Bundle ID" = "com.apple.CharacterPaletteIM"; InputSourceKind = "Non Keyboard Input Method"; }'
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ "Bundle ID" = "com.apple.KeyboardViewer"; InputSourceKind = "Non Keyboard Input Method"; }'
-
-
 # Use plain text for new documents in TextEdit.app
 defaults write com.apple.TextEdit RichText -bool false
 
