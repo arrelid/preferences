@@ -24,15 +24,6 @@ hs.hotkey.bind({"cmd", "alt"}, "'", function()
   focusedWindow:moveToScreen(focusedWindow:screen():next(), 0)
 end)
 
--- Triggering system lock + screen saver
-hs.hotkey.bind({"cmd", "shift"}, "s", function()
-  hs.caffeinate.startScreensaver()
-end)
-
-hs.hotkey.bind({"cmd", "shift"}, "l", function()
-  hs.caffeinate.lockScreen()
-end)
-
 -- Reloading the Hammerspoon conf. should be a breeze
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "r", function()
   hs.reload()
