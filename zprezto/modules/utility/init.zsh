@@ -41,8 +41,8 @@ alias ftp='noglob ftp'
 alias history='noglob history'
 alias locate='noglob locate'
 alias rake='noglob rake'
-alias rsync='noglob noremoteglob rsync'
-alias scp='noglob noremoteglob scp'
+alias rsync='noglob rsync'
+alias scp='noglob scp'
 alias sftp='noglob sftp'
 
 # Define general aliases.
@@ -76,10 +76,13 @@ if is-callable 'dircolors'; then
   alias ls='ls --group-directories-first'
 
   if zstyle -t ':prezto:module:utility:ls' color; then
-    if [[ -s "$HOME/.dir_colors" ]]; then
-      eval "$(dircolors --sh "$HOME/.dir_colors")"
-    else
-      eval "$(dircolors --sh)"
+    # Call dircolors to define colors if they're missing
+    if [[ -z "$LS_COLORS" ]]; then
+      if [[ -s "$HOME/.dir_colors" ]]; then
+        eval "$(dircolors --sh "$HOME/.dir_colors")"
+      else
+        eval "$(dircolors --sh)"
+      fi
     fi
 
     alias ls="${aliases[ls]:-ls} --color=auto"
@@ -89,11 +92,15 @@ if is-callable 'dircolors'; then
 else
   # BSD Core Utilities
   if zstyle -t ':prezto:module:utility:ls' color; then
-    # Define colors for BSD ls.
-    export LSCOLORS='gxfxbEaEBxxEhEhBaDaCaD'
+    # Define colors for BSD ls if they're not already defined
+    if [[ -z "$LSCOLORS" ]]; then
+      export LSCOLORS='gxfxbEaEBxxEhEhBaDaCaD'
+    fi
 
-    # Define colors for the completion system.
-    export LS_COLORS='di=36;40:ln=35;40:so=31;:pi=0;:ex=1;;40:bd=0;:cd=37;:su=37;:sg=0;:tw=0;:ow=0;:'
+    # Define colors for the completion system if they're not already defined
+    if [[ -z "$LS_COLORS" ]]; then
+      export LS_COLORS='di=36;40:ln=35;40:so=31;:pi=0;:ex=1;;40:bd=0;:cd=37;:su=37;:sg=0;:tw=0;:ow=0;:'
+    fi
 
     alias ls="${aliases[ls]:-ls} -G"
   else
@@ -121,7 +128,7 @@ if zstyle -t ':prezto:module:utility:grep' color; then
   alias grep="${aliases[grep]:-grep} --color=auto"
 fi
 
-# Mac OS X Everywhere
+# macOS Everywhere
 if [[ "$OSTYPE" == darwin* ]]; then
   alias o='open'
 elif [[ "$OSTYPE" == cygwin* ]]; then
@@ -151,12 +158,7 @@ elif (( $+commands[wget] )); then
 fi
 
 # Resource Usage
-if (( $+commands[pydf] )); then
-  alias df=pydf
-else
-  alias df='df -kh'
-fi
-
+alias df='df -kh'
 alias du='du -kh'
 
 if [[ "$OSTYPE" == (darwin*|*bsd*) ]]; then
@@ -223,6 +225,10 @@ function psu {
 # Example:
 #   - Local: '*.txt', './foo:2017*.txt', '/var/*:log.txt'
 #   - Remote: user@localhost:foo/
+#
+# NOTE: This function is buggy and is not used anywhere until we can make sure
+# it's fixed. See https://github.com/sorin-ionescu/prezto/issues/1443 and
+# https://github.com/sorin-ionescu/prezto/issues/1521 for more information.
 function noremoteglob {
   local -a argo
   local cmd="$1"
