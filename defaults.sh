@@ -23,7 +23,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Disable sound effects when changing volume
-defaults write NSGlobalDomain com.apple.sound.beep.feedback -integer 0
+defaults write NSGlobalDomain com.apple.sound.beep.feedback -int 0
 
 # Disable sounds effects for user interface changes
 defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -int 0
@@ -31,45 +31,21 @@ defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -int 0
 # Set alert volume to 0
 defaults write NSGlobalDomain com.apple.sound.beep.volume -float 0.0
 
-# Show volume in the menu bar
-defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -int 0
-
-# Show Bluetooth in the menu bar
-defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -int 0
-
-# Setup the screen saver to require password after a few seconds
-defaults write com.apple.screensaver "askForPassword" -int 1
-defaults write com.apple.screensaver "askForPasswordDelay" -int 5
-defaults write com.apple.screensaver "tokenRemovalAction" -int 0
-
 # Use a dark menu bar / dock
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
 # Use plain text for new documents in TextEdit.app
 defaults write com.apple.TextEdit RichText -bool false
 
-# Allow fast user switching (icon style, in the menu bar)
-defaults write NSGlobalDomain userMenuExtraStyle -int 2
-
-# Show the Develop menu in Safari
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-
 # Use Pro as the default/startup profile
 defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
-
-# Always show the tab bar
-defaults write com.apple.Terminal ShowTabBar -bool true
 
 # Don't show Siri in the menu bar
 defaults write com.apple.Siri StatusMenuVisible -bool false
 
 # Hold Command + Space to invoke Siri
 defaults write com.apple.Siri HotkeyTag -int 2
-
-# Use list view in all Finder windows by default
-# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # New Finder windows points to home
 defaults write com.apple.finder NewWindowTarget -string "PfHm"
@@ -100,9 +76,6 @@ defaults write com.apple.dock autohide -bool true
 
 # Automatically hide and show the system menu bar
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
-
-# Enable scroll gesture (with modifier) to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 
 # Don't create dreaded .DS_Store files.
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
