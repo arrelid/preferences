@@ -3,10 +3,6 @@ set -x
 
 # Credit where credit is due: https://github.com/robb/.dotfiles
 
-# Disable the new window animation - every new window grows
-# from a small one to a big one over a few hundred millisecs
-defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
-
 # Expand save panel by default.
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
