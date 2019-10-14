@@ -28,9 +28,6 @@ defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -int 0
 # Set alert volume to 0
 defaults write NSGlobalDomain com.apple.sound.beep.volume -float 0.0
 
-# Use a dark menu bar / dock
-defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
-
 # Use plain text for new documents in TextEdit.app
 defaults write com.apple.TextEdit RichText -bool false
 
