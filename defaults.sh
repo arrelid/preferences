@@ -83,6 +83,3 @@ defaults write com.apple.ImageCapture disableHotPlug -bool YES
 # Allow tap to click for Apple trackpad devices
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-
-# Show the ~/Library folder
-chflags nohidden ~/Library
