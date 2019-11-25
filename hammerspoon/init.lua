@@ -1,29 +1,3 @@
--- Manipulation of window position and size
-function resizeFrontmostApplication(layout)
-  hs.application.frontmostApplication():focusedWindow():moveToUnit(layout, 0)
-end
-
-hs.hotkey.bind({"cmd", "alt"}, "j", function()
-  resizeFrontmostApplication(hs.layout.left50)
-end)
-
-hs.hotkey.bind({"cmd", "alt"}, "k", function()
-  resizeFrontmostApplication(hs.geometry(0.25, 0, 0.5, 1))
-end)
-
-hs.hotkey.bind({"cmd", "alt"}, "l", function()
-  resizeFrontmostApplication(hs.layout.right50)
-end)
-
-hs.hotkey.bind({"cmd", "alt"}, ";", function()
-  resizeFrontmostApplication(hs.layout.maximized)
-end)
-
-hs.hotkey.bind({"cmd", "alt"}, "'", function()
-  local focusedWindow = hs.application.frontmostApplication():focusedWindow()
-  focusedWindow:moveToScreen(focusedWindow:screen():next(), 0)
-end)
-
 -- Reloading the Hammerspoon conf. should be a breeze
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "r", function()
   hs.reload()
