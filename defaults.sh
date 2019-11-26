@@ -28,6 +28,10 @@ defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -int 0
 # Set alert volume to 0
 defaults write NSGlobalDomain com.apple.sound.beep.volume -float 0.0
 
+# Show the volume menu bar item
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -int 1
+defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/Volume.menu"
+
 # Use plain text for new documents in TextEdit.app
 defaults write com.apple.TextEdit RichText -bool false
 
@@ -83,3 +87,6 @@ defaults write com.apple.ImageCapture disableHotPlug -bool YES
 # Allow tap to click for Apple trackpad devices
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+
+# Kill the menu bar / dock / etc. or we won't see some of the changes until next reboot
+killall -KILL SystemUIServer
