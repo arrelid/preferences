@@ -33,7 +33,7 @@ defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextr
 defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/Volume.menu"
 
 # Use plain text for new documents in TextEdit.app
-defaults write com.apple.TextEdit RichText -bool false
+defaults write com.apple.TextEdit RichText -int 0
 
 # Use Pro as the default/startup profile
 defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
