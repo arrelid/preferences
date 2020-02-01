@@ -69,19 +69,20 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Tabular'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'       " For airline colorscheme solarized
 Plugin 'altercation/vim-colors-solarized'     " For colorscheme solarized
 Plugin 'bitc/vim-bad-whitespace'
 Plugin 'commentary.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'file:///usr/local/opt/fzf', {'pinned': 1}
+Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'taglist.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'plasticboy/vim-markdown'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'       " For airline colorscheme solarized
 
 " Vundle setup complete, reset filetype
 call vundle#end()
@@ -100,11 +101,11 @@ set background=dark
 let g:solarized_termcolors=256  " Fancy fallback so that you don't have to change your terminal's color scheme
 colorscheme solarized
 
-" Configure ctrl-p
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPLastMode --dir'                        " Remember the last mode _and_ original directory instead of defaulting to some specific mode
-let g:ctrlp_extensions = ['line', 'dir', 'buffertag', 'tag']   " Enable extensions
-let g:ctrlp_by_filename = 1                                    " Search by filename only by default (toggle with <c-d>)
+" Configure fzf
+let g:fzf_command_prefix = 'Fzf'
+nnoremap <silent> <C-p> :FzfFiles<cr>
+nnoremap <silent> <C-h> :FzfHistory<cr>
+nnoremap <silent> <C-t> :FzfBuffers<cr>
 
 " Configure airline
 let g:airline_theme='solarized'
