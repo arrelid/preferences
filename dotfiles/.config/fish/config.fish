@@ -1,2 +1,3 @@
 set -x fish_greeting
-set -x LC_ALL en_US.UTF-8
+set -x LC_ALL "en_US.UTF-8"
+set -x FZF_DEFAULT_OPTS "--layout=reverse --info=inline --cycle"
