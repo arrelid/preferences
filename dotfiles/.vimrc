@@ -72,7 +72,6 @@ Plugin 'Tabular'
 Plugin 'altercation/vim-colors-solarized'     " For colorscheme solarized
 Plugin 'bitc/vim-bad-whitespace'
 Plugin 'commentary.vim'
-Plugin 'file:///usr/local/opt/fzf', {'pinned': 1}
 Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'plasticboy/vim-markdown'
@@ -102,6 +101,7 @@ let g:solarized_termcolors=256  " Fancy fallback so that you don't have to chang
 colorscheme solarized
 
 " Configure fzf
+set rtp+=/usr/local/opt/fzf
 let g:fzf_command_prefix = 'Fzf'
 nnoremap <silent> <C-p> :FzfFiles<cr>
 nnoremap <silent> <C-h> :FzfHistory<cr>
