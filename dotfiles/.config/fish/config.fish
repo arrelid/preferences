@@ -4,5 +4,5 @@ set -x FZF_DEFAULT_OPTS "--layout=reverse --inline-info --cycle"
 set -gx EDITOR vim
 set -gx VISUAL vim
 
-source (pyenv init – | psub)
-source (rbenv init - | psub)
+status --is-interactive; and . (pyenv init -| psub)
+status --is-interactive; and . (rbenv init - | psub)
