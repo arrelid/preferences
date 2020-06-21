@@ -113,6 +113,7 @@ let g:airline_section_c = '%F'
 
 " Configure markdown
 let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_frontmatter = 1
 
 " Set the default font for vim GUIs
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h10
