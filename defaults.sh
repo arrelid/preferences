@@ -12,12 +12,15 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 # Set keyboard repeat rate to "damn fast".
 defaults write NSGlobalDomain KeyRepeat -int 2
 
+# Disable press-and-hold for keys in favor of key repeat.
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
 # Set a shorter delay until key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
 
 # Disable sound effects when changing volume
 defaults write NSGlobalDomain com.apple.sound.beep.feedback -int 0
@@ -25,12 +28,11 @@ defaults write NSGlobalDomain com.apple.sound.beep.feedback -int 0
 # Disable sounds effects for user interface changes
 defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -int 0
 
+# Flash screen on beep
+defaults write com.apple.systemsound com.apple.sound.beep.flash -int 1
+
 # Set alert volume to 0
 defaults write NSGlobalDomain com.apple.sound.beep.volume -float 0.0
-
-# Show the volume menu bar item
-defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -int 1
-defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/Volume.menu"
 
 # Use plain text for new documents in TextEdit.app
 defaults write com.apple.TextEdit RichText -int 0
@@ -44,6 +46,9 @@ defaults write com.apple.Siri StatusMenuVisible -bool false
 
 # Hold Command + Space to invoke Siri
 defaults write com.apple.Siri HotkeyTag -int 2
+
+# Don't listen to Siri
+defaults write com.apple.Siri VoiceTriggerUserEnabled -int 0
 
 # Disable the built-in captive portal (use your browser instead)
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control Active -bool false
@@ -68,6 +73,9 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# Keep folders on top when sorting by name on the desktop
+defaults write com.apple.finder _FXSortFoldersFirstOnDesktop -bool true
 
 # Move Dock to the right
 defaults write com.apple.dock orientation -string "right"
