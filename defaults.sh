@@ -50,6 +50,10 @@ defaults write com.apple.Siri HotkeyTag -int 2
 # Don't listen to Siri
 defaults write com.apple.Siri VoiceTriggerUserEnabled -int 0
 
+# These likely won't succeed - see this article: https://eclecticlight.co/2020/03/04/how-macos-10-14-and-later-overrides-write-permission-on-some-files/
+defaults write com.apple.universalaccess reduceTransparency -bool true
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+
 # Disable the built-in captive portal (use your browser instead)
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control Active -bool false
 
