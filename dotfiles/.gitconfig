@@ -50,6 +50,9 @@
   # Perform GC automagically, when needed
   auto = 1
 
+[init]
+  defaultBranch = main
+
 [grep]
   linenumber = true
 
