@@ -15,6 +15,9 @@ set scrolloff=3            " Keep some context around the current line when scro
 " Enable syntax highlighting depending on file type
 syntax on
 
+" Enable all Python syntax highlighting features
+let python_highlight_all = 1
+
 " Whitespacing and line/row breaks
 set tabstop=2                                       " a tab is two spaces...
 set softtabstop=2                                   " ...and the corresponding backspace removes the same amount of space
@@ -74,6 +77,7 @@ Plugin 'bitc/vim-bad-whitespace'
 Plugin 'commentary.vim'
 Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'nvie/vim-flake8'                      " PEP 8 checking
 Plugin 'plasticboy/vim-markdown'
 Plugin 'taglist.vim'
 Plugin 'tpope/vim-fugitive'
@@ -82,6 +86,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'       " For airline colorscheme solarized
+Plugin 'vim-scripts/indentpython.vim'         " Python indents conforming to PEP 8 standard
+Plugin 'vim-syntastic/syntastic'              " Check syntax on each save
 
 " Vundle setup complete, reset filetype
 call vundle#end()
@@ -117,3 +123,13 @@ let g:vim_markdown_frontmatter = 1
 
 " Set the default font for vim GUIs
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h10
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set showmatch |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
